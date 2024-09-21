@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Points/negative_points.gd" id="1_vo8nb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5u768"]
+radius = 5.0
 
 [node name="NegativePoints" type="Area2D"]
 script = ExtResource("1_vo8nb")

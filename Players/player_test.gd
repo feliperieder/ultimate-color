@@ -50,11 +50,17 @@ func _physics_process(delta: float) -> void:
 
 func gainPoint():
 	points += bullet_point
-	print(points)
+
 
 func losePoint():
 	var negative_point = NEGATIVE_POINT_PATH.instantiate()
 	get_parent().add_child(negative_point)
 	negative_point.global_position= global_position
 	
-	lost_points = bullet_point/2
+	lost_points += bullet_point/2
+
+func endLevel():	
+	points -= lost_points
+	if points <= 0:
+		points = 0
+	print("Comic Sans:", points)
