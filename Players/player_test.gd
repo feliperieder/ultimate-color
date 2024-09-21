@@ -6,9 +6,13 @@ const SPEED = 100.0
 const MAX_POINTS = 100.0
 var bullet_point = 1.0
 var points = 0.0
+var lost_points = 0.0
 
 var error_layer = 0
 var painting = false
+var player_error = 0
+
+const NEGATIVE_POINT_PATH = preload("res://Points/Negative Points.tscn")
 
 func _ready() -> void:
 	print(bullet_point)
@@ -38,8 +42,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		painting = false
 
-	if error_layer != 0 and painting:
-		print(error_layer)
+	if error_layer != 0 and painting and player_error == 0:
+		losePoint()
 
 	move_and_slide()
 
@@ -47,4 +51,10 @@ func _physics_process(delta: float) -> void:
 func gainPoint():
 	points += bullet_point
 	print(points)
+
+func losePoint():
+	var negative_point = NEGATIVE_POINT_PATH.instantiate()
+	get_parent().add_child(negative_point)
+	negative_point.global_position= global_position
 	
+	lost_points = bullet_point/2
