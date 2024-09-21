@@ -1,11 +1,660 @@
-[gd_scene load_steps=3 format=3 uid="uid://y0ixtj32pwe3"]
+[gd_scene load_steps=6 format=3 uid="uid://y0ixtj32pwe3"]
 
+[ext_resource type="Texture2D" uid="uid://c2prx3nb5hhv4" path="res://Images/square.jpg" id="1_00v63"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="1_dq840"]
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="2_b3ych"]
+[ext_resource type="PackedScene" uid="uid://dua71hf1wdrcx" path="res://Points/Positive Points.tscn" id="4_vgd1q"]
+[ext_resource type="PackedScene" uid="uid://bxe7hbmljjogw" path="res://Points/error_zone.tscn" id="5_xmm56"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Square" type="Sprite2D" parent="."]
+position = Vector2(404, 281)
+scale = Vector2(4, 4)
+texture = ExtResource("1_00v63")
 
 [node name="Drawing" parent="." instance=ExtResource("1_dq840")]
 
 [node name="PlayerTest" parent="." instance=ExtResource("2_b3ych")]
-position = Vector2(478, 270)
+position = Vector2(129, 44)
+
+[node name="PositivePoints" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 505)
+
+[node name="PositivePoints3" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(630, 505)
+
+[node name="Error Zone" parent="." instance=ExtResource("5_xmm56")]
+position = Vector2(65, 281)
+scale = Vector2(9.62827, 28.8529)
+
+[node name="Error Zone2" parent="." instance=ExtResource("5_xmm56")]
+position = Vector2(737, 286)
+scale = Vector2(9.62827, 28.8529)
+
+[node name="Error Zone3" parent="." instance=ExtResource("5_xmm56")]
+position = Vector2(401, 544)
+scale = Vector2(25.3483, 2.8129)
+
+[node name="Error Zone4" parent="." instance=ExtResource("5_xmm56")]
+position = Vector2(403, 7)
+scale = Vector2(25.3483, 2.8129)
+
+[node name="Error Zone5" parent="." instance=ExtResource("5_xmm56")]
+position = Vector2(402, 277)
+scale = Vector2(22, 22)
+
+[node name="PositivePoints5" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(188, 505)
+
+[node name="PositivePoints6" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(202, 505)
+
+[node name="PositivePoints7" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(217, 505)
+
+[node name="PositivePoints8" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(233, 505)
+
+[node name="PositivePoints9" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(248, 505)
+
+[node name="PositivePoints10" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(262, 505)
+
+[node name="PositivePoints11" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(277, 505)
+
+[node name="PositivePoints12" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(292, 505)
+
+[node name="PositivePoints13" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(307, 505)
+
+[node name="PositivePoints14" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(321, 505)
+
+[node name="PositivePoints15" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(336, 505)
+
+[node name="PositivePoints16" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(352, 505)
+
+[node name="PositivePoints17" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(367, 505)
+
+[node name="PositivePoints18" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(381, 505)
+
+[node name="PositivePoints19" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(396, 505)
+
+[node name="PositivePoints20" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(409, 505)
+
+[node name="PositivePoints21" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(424, 505)
+
+[node name="PositivePoints22" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(438, 505)
+
+[node name="PositivePoints23" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(453, 505)
+
+[node name="PositivePoints24" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(469, 505)
+
+[node name="PositivePoints25" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(484, 505)
+
+[node name="PositivePoints26" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(498, 505)
+
+[node name="PositivePoints27" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(513, 505)
+
+[node name="PositivePoints28" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(528, 505)
+
+[node name="PositivePoints29" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(543, 505)
+
+[node name="PositivePoints30" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(557, 505)
+
+[node name="PositivePoints31" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(572, 505)
+
+[node name="PositivePoints32" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(588, 505)
+
+[node name="PositivePoints33" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(603, 505)
+
+[node name="PositivePoints34" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(617, 505)
+
+[node name="PositivePoints154" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 493)
+
+[node name="PositivePoints37" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(188, 505)
+
+[node name="PositivePoints38" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(202, 505)
+
+[node name="PositivePoints39" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(217, 505)
+
+[node name="PositivePoints40" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(233, 505)
+
+[node name="PositivePoints41" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(248, 505)
+
+[node name="PositivePoints42" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(262, 505)
+
+[node name="PositivePoints43" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(277, 505)
+
+[node name="PositivePoints44" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(292, 505)
+
+[node name="PositivePoints45" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(307, 505)
+
+[node name="PositivePoints46" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(321, 505)
+
+[node name="PositivePoints47" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(336, 505)
+
+[node name="PositivePoints48" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(352, 505)
+
+[node name="PositivePoints49" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(367, 505)
+
+[node name="PositivePoints50" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(381, 505)
+
+[node name="PositivePoints51" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(396, 505)
+
+[node name="PositivePoints52" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(409, 505)
+
+[node name="PositivePoints53" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(424, 505)
+
+[node name="PositivePoints54" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(438, 505)
+
+[node name="PositivePoints55" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(453, 505)
+
+[node name="PositivePoints56" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(469, 505)
+
+[node name="PositivePoints57" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(484, 505)
+
+[node name="PositivePoints58" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(498, 505)
+
+[node name="PositivePoints59" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(513, 505)
+
+[node name="PositivePoints60" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(528, 505)
+
+[node name="PositivePoints61" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(543, 505)
+
+[node name="PositivePoints62" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(557, 505)
+
+[node name="PositivePoints63" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(572, 505)
+
+[node name="PositivePoints64" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(588, 505)
+
+[node name="PositivePoints65" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(603, 505)
+
+[node name="PositivePoints66" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(617, 505)
+
+[node name="PositivePoints2" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(174, 45)
+
+[node name="PositivePoints4" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 45)
+
+[node name="PositivePoints67" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(189, 45)
+
+[node name="PositivePoints68" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(203, 45)
+
+[node name="PositivePoints69" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(218, 45)
+
+[node name="PositivePoints70" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(234, 45)
+
+[node name="PositivePoints71" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(249, 45)
+
+[node name="PositivePoints72" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(263, 45)
+
+[node name="PositivePoints73" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(278, 45)
+
+[node name="PositivePoints74" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(293, 45)
+
+[node name="PositivePoints75" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(308, 45)
+
+[node name="PositivePoints76" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(322, 45)
+
+[node name="PositivePoints77" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(337, 45)
+
+[node name="PositivePoints78" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(353, 45)
+
+[node name="PositivePoints79" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(368, 45)
+
+[node name="PositivePoints80" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(382, 45)
+
+[node name="PositivePoints81" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(397, 45)
+
+[node name="PositivePoints82" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(410, 45)
+
+[node name="PositivePoints83" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(425, 45)
+
+[node name="PositivePoints84" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(439, 45)
+
+[node name="PositivePoints85" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(454, 45)
+
+[node name="PositivePoints86" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(470, 45)
+
+[node name="PositivePoints87" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(485, 45)
+
+[node name="PositivePoints88" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(499, 45)
+
+[node name="PositivePoints89" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(514, 45)
+
+[node name="PositivePoints90" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(529, 45)
+
+[node name="PositivePoints91" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(544, 45)
+
+[node name="PositivePoints92" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(558, 45)
+
+[node name="PositivePoints93" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(573, 45)
+
+[node name="PositivePoints94" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(589, 45)
+
+[node name="PositivePoints95" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(604, 45)
+
+[node name="PositivePoints96" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(618, 45)
+
+[node name="PositivePoints98" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 45)
+
+[node name="PositivePoints99" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(189, 45)
+
+[node name="PositivePoints100" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(203, 45)
+
+[node name="PositivePoints101" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(218, 45)
+
+[node name="PositivePoints102" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(234, 45)
+
+[node name="PositivePoints103" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(249, 45)
+
+[node name="PositivePoints104" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(263, 45)
+
+[node name="PositivePoints105" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(278, 45)
+
+[node name="PositivePoints106" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(293, 45)
+
+[node name="PositivePoints107" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(308, 45)
+
+[node name="PositivePoints108" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(322, 45)
+
+[node name="PositivePoints109" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(337, 45)
+
+[node name="PositivePoints110" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(353, 45)
+
+[node name="PositivePoints111" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(368, 45)
+
+[node name="PositivePoints112" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(382, 45)
+
+[node name="PositivePoints113" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(397, 45)
+
+[node name="PositivePoints114" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(410, 45)
+
+[node name="PositivePoints115" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(425, 45)
+
+[node name="PositivePoints116" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(439, 45)
+
+[node name="PositivePoints117" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(454, 45)
+
+[node name="PositivePoints118" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(470, 45)
+
+[node name="PositivePoints119" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(485, 45)
+
+[node name="PositivePoints120" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(499, 45)
+
+[node name="PositivePoints121" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(514, 45)
+
+[node name="PositivePoints122" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(529, 45)
+
+[node name="PositivePoints123" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(544, 45)
+
+[node name="PositivePoints124" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(558, 45)
+
+[node name="PositivePoints125" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(573, 45)
+
+[node name="PositivePoints126" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(589, 45)
+
+[node name="PositivePoints127" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(604, 45)
+
+[node name="PositivePoints128" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(618, 45)
+
+[node name="PositivePoints129" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(174, 63)
+
+[node name="PositivePoints130" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 63)
+
+[node name="PositivePoints161" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(174, 63)
+
+[node name="PositivePoints162" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 63)
+
+[node name="PositivePoints163" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(174, 80)
+
+[node name="PositivePoints131" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 97)
+
+[node name="PositivePoints132" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 97)
+
+[node name="PositivePoints133" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 115)
+
+[node name="PositivePoints164" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 115)
+
+[node name="PositivePoints165" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 132)
+
+[node name="PositivePoints134" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 152)
+
+[node name="PositivePoints135" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 152)
+
+[node name="PositivePoints136" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 170)
+
+[node name="PositivePoints166" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 170)
+
+[node name="PositivePoints167" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 187)
+
+[node name="PositivePoints137" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 204)
+
+[node name="PositivePoints138" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 204)
+
+[node name="PositivePoints139" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 222)
+
+[node name="PositivePoints168" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 222)
+
+[node name="PositivePoints169" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 239)
+
+[node name="PositivePoints140" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 254)
+
+[node name="PositivePoints141" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 254)
+
+[node name="PositivePoints142" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 272)
+
+[node name="PositivePoints170" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 272)
+
+[node name="PositivePoints171" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(173, 289)
+
+[node name="PositivePoints143" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 306)
+
+[node name="PositivePoints144" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 306)
+
+[node name="PositivePoints145" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 324)
+
+[node name="PositivePoints172" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 324)
+
+[node name="PositivePoints173" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 341)
+
+[node name="PositivePoints146" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 361)
+
+[node name="PositivePoints147" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 361)
+
+[node name="PositivePoints148" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 379)
+
+[node name="PositivePoints174" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 379)
+
+[node name="PositivePoints175" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 396)
+
+[node name="PositivePoints149" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(171, 413)
+
+[node name="PositivePoints150" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(171, 413)
+
+[node name="PositivePoints151" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(171, 431)
+
+[node name="PositivePoints176" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(171, 431)
+
+[node name="PositivePoints177" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(171, 448)
+
+[node name="PositivePoints178" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(172, 463)
+
+[node name="PositivePoints153" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(171, 480)
+
+[node name="PositivePoints158" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 493)
+
+[node name="PositivePoints181" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(633, 80)
+
+[node name="PositivePoints182" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 97)
+
+[node name="PositivePoints183" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 97)
+
+[node name="PositivePoints184" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 115)
+
+[node name="PositivePoints185" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 115)
+
+[node name="PositivePoints186" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 132)
+
+[node name="PositivePoints187" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 152)
+
+[node name="PositivePoints188" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 152)
+
+[node name="PositivePoints189" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 170)
+
+[node name="PositivePoints190" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 170)
+
+[node name="PositivePoints191" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 187)
+
+[node name="PositivePoints192" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 204)
+
+[node name="PositivePoints193" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 204)
+
+[node name="PositivePoints194" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 222)
+
+[node name="PositivePoints195" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 222)
+
+[node name="PositivePoints196" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 239)
+
+[node name="PositivePoints197" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 254)
+
+[node name="PositivePoints198" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 254)
+
+[node name="PositivePoints199" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 272)
+
+[node name="PositivePoints200" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 272)
+
+[node name="PositivePoints201" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(632, 289)
+
+[node name="PositivePoints202" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 306)
+
+[node name="PositivePoints203" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 306)
+
+[node name="PositivePoints204" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 324)
+
+[node name="PositivePoints205" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 324)
+
+[node name="PositivePoints206" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 341)
+
+[node name="PositivePoints207" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 361)
+
+[node name="PositivePoints208" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 361)
+
+[node name="PositivePoints209" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 379)
+
+[node name="PositivePoints210" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 379)
+
+[node name="PositivePoints211" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 396)
+
+[node name="PositivePoints212" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(630, 413)
+
+[node name="PositivePoints213" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(630, 413)
+
+[node name="PositivePoints214" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(630, 431)
+
+[node name="PositivePoints215" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(630, 431)
+
+[node name="PositivePoints216" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(630, 448)
+
+[node name="PositivePoints217" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(631, 463)
+
+[node name="PositivePoints218" parent="." instance=ExtResource("4_vgd1q")]
+position = Vector2(630, 480)

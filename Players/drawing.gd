@@ -46,6 +46,7 @@ func _physics_process(delta: float) -> void:
 func paint(color):
 	current_line = Line2D.new()
 	current_line.default_color = color
-	current_line.width = 5
+	current_line.width = 10
 	_lines.add_child(current_line)
-	current_line.add_point(brush.global_position)
+	current_line.add_point(brush.global_position - Vector2(0,5))
+	current_line.add_point(brush.global_position + Vector2(0,5))

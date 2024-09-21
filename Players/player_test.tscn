@@ -1,14 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1usyydica8j"]
+[gd_scene load_steps=3 format=3 uid="uid://d1usyydica8j"]
 
 [ext_resource type="Script" path="res://Players/player_test.gd" id="1_2xbe0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xhr3"]
+size = Vector2(10, 10)
 
 [node name="PlayerTest" type="CharacterBody2D" groups=["brush"]]
 script = ExtResource("1_2xbe0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." groups=["brush"]]
 offset_left = -5.0
 offset_top = -5.0
 offset_right = 5.0
 offset_bottom = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6xhr3")
