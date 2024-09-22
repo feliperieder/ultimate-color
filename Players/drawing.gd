@@ -10,8 +10,11 @@ var red = false
 var blue = false
 var green = false
 
+var level_finished = false
+
 func _ready() -> void:
 	brush = get_tree().get_first_node_in_group("brush")
+	level_finished = false
 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta: float) -> void:
@@ -40,13 +43,14 @@ func _physics_process(delta: float) -> void:
 		blue = false
 		
 		
-	if red or blue or green:
+	if (red or blue or green) and not level_finished:
 		current_line.add_point(brush.global_position)
 
 func paint(color):
-	current_line = Line2D.new()
-	current_line.default_color = color
-	current_line.width = 10
-	_lines.add_child(current_line)
-	current_line.add_point(brush.global_position - Vector2(0,5))
-	current_line.add_point(brush.global_position + Vector2(0,5))
+	if not level_finished:
+		current_line = Line2D.new()
+		current_line.default_color = color
+		current_line.width = 10
+		_lines.add_child(current_line)
+		current_line.add_point(brush.global_position - Vector2(0,5))
+		current_line.add_point(brush.global_position + Vector2(0,5))

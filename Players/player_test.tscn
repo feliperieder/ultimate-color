@@ -6,6 +6,7 @@
 size = Vector2(10, 10)
 
 [node name="PlayerTest" type="CharacterBody2D" groups=["brush"]]
+z_index = 2
 script = ExtResource("1_2xbe0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

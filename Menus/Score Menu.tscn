@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://dfp2oqagyu7fm"]
+[gd_scene load_steps=4 format=3 uid="uid://dfp2oqagyu7fm"]
+
+[ext_resource type="Script" path="res://Menus/score_menu.gd" id="1_euoh0"]
+[ext_resource type="FontFile" uid="uid://dua46iacg3fcv" path="res://Art/Ldfcomicsans-jj7l.ttf" id="1_ja20c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ket5"]
+font = ExtResource("1_ja20c")
+font_size = 100
+font_color = Color(0.345098, 0, 0.466667, 1)
 
 [node name="ScoreMenu" type="Node2D"]
+script = ExtResource("1_euoh0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Pontuação: 1000000"
+label_settings = SubResource("LabelSettings_0ket5")
+horizontal_alignment = 1
+vertical_alignment = 1

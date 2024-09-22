@@ -14,13 +14,15 @@ var player_error = 0
 
 const NEGATIVE_POINT_PATH = preload("res://Points/Negative Points.tscn")
 
-func _ready() -> void:
-	print(bullet_point)
-	var bullets = get_tree().get_node_count_in_group("positive_point")
-	print(bullets)
-	bullet_point = MAX_POINTS / bullets
-	print(bullet_point)
+var clock
+var current_bullets
+var game_ended = false
 
+func _ready() -> void:
+	clock = get_tree().get_first_node_in_group("timer")
+	var bullets = get_tree().get_node_count_in_group("positive_point")
+	current_bullets = bullets
+	bullet_point = MAX_POINTS / bullets
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
@@ -44,12 +46,15 @@ func _physics_process(delta: float) -> void:
 
 	if error_layer != 0 and painting and player_error == 0:
 		losePoint()
+	
+	timerPontuation()
 
 	move_and_slide()
 
 
 func gainPoint():
 	points += bullet_point
+	current_bullets -= 1
 
 
 func losePoint():
@@ -59,8 +64,16 @@ func losePoint():
 	
 	lost_points += bullet_point/2
 
-func endLevel():	
-	points -= lost_points
-	if points <= 0:
-		points = 0
-	print("Comic Sans:", points)
+func timerPontuation():
+	if current_bullets <= 0:
+		var timer_points =  clock.timer.time_left
+		clock.timer.paused = true
+		endLevel(timer_points)
+
+func endLevel(timer_points = 0):
+	if not game_ended:
+		points = int((points + timer_points - lost_points) *10) 
+		if points <= 0:
+			points = 0
+		game_ended = true
+		get_parent().endLevel(points)

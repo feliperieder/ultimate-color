@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpencn7rbua8f"]
 
-[ext_resource type="Script" path="res://Players/drawing.gd" id="1_ycec4"]
+[ext_resource type="Script" path="res://Players/drawing.gd" id="1_ty0aw"]
 
 [node name="Drawing" type="Node2D"]
-script = ExtResource("1_ycec4")
+z_index = 1
+script = ExtResource("1_ty0aw")
 
 [node name="Line2D" type="Line2D" parent="."]
