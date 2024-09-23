@@ -35,6 +35,7 @@ func fill_line_with_objects() -> void:
 			# Calcular a posição usando linear_interpolate
 			var position = start_point.lerp(end_point, j / float(num_objects))
 			var instance = OBJECT_SCENE_PATH.instantiate()
+			instance.color = "red"
 			instance.position = position
 			add_child(instance)  # Adiciona o objeto à cena
 
@@ -47,6 +48,7 @@ func endLevel(points):
 	background.hide()
 	clock.hide()
 	player.hide()
+	drawing.finishingLine()
 	drawing.level_finished = true
 	MenuScoreInstanciate(points)
 	

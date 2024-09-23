@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 100.0
 
 const MAX_POINTS = 100.0
@@ -39,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.x, 0, SPEED)
 		
-	if Input.is_action_pressed("blue_color") or Input.is_action_pressed("red_color") or Input.is_action_pressed("green_color"):
+	if Input.is_action_pressed("blue_color") or Input.is_action_pressed("red_color") or Input.is_action_pressed("white_color") or Input.is_action_just_pressed("yellow_color"):
 		painting = true
 	else:
 		painting = false

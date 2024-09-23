@@ -15,10 +15,11 @@ offset_left = -46.0
 offset_top = -54.0
 offset_right = 1298.0
 offset_bottom = 790.0
+color = Color(0.136826, 0.136826, 0.136826, 1)
 
 [node name="Line2D" type="Line2D" parent="."]
 points = PackedVector2Array(172, 45, 172, 508, 635, 508, 635, 43, 168, 43)
-default_color = Color(0, 0, 0, 1)
+default_color = Color(1, 0, 0, 0.541176)
 
 [node name="Timer" parent="." instance=ExtResource("1_4rcma")]
 timer_time = 50
