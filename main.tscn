@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://y0ixtj32pwe3"]
+[gd_scene load_steps=7 format=3 uid="uid://y0ixtj32pwe3"]
 
 [ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="1_4rcma"]
 [ext_resource type="Script" path="res://main.gd" id="1_7xp4k"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="1_dq840"]
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="2_b3ych"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="2_d32u7"]
 [ext_resource type="PackedScene" uid="uid://bxe7hbmljjogw" path="res://Points/error_zone.tscn" id="5_xmm56"]
 
 [node name="Main" type="Node2D"]
@@ -17,9 +18,9 @@ offset_right = 1298.0
 offset_bottom = 790.0
 color = Color(0.136826, 0.136826, 0.136826, 1)
 
-[node name="Line2D" type="Line2D" parent="."]
-points = PackedVector2Array(172, 45, 172, 508, 635, 508, 635, 43, 168, 43)
-default_color = Color(1, 0, 0, 0.541176)
+[node name="LevelLine" parent="." instance=ExtResource("2_d32u7")]
+points = PackedVector2Array(168, 45, 630, 45, 630, 508, 170, 508, 170, 45)
+color = "light_yellow"
 
 [node name="Timer" parent="." instance=ExtResource("1_4rcma")]
 timer_time = 50
