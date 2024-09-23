@@ -30,3 +30,12 @@ text = "Pontuação: 1000000"
 label_settings = SubResource("LabelSettings_0ket5")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 556.0
+offset_top = 401.0
+offset_right = 646.0
+offset_bottom = 432.0
+text = "Next Level"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

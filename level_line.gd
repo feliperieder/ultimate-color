@@ -5,13 +5,13 @@ const OBJECT_SCENE_PATH = preload("res://Points/Positive Points.tscn")
 const SPACING = 1  # Espaçamento entre os objetos
 
 @export_enum("red", "yellow", "blue", "white", "purple", "pink", "light_yellow", "green") var color = "red"
-const COLOR_RED = Color.RED
-const COLOR_YELLOW = Color.YELLOW
-const COLOR_BLUE = Color.BLUE
+const COLOR_RED = Color.INDIAN_RED
+const COLOR_YELLOW = Color.LIGHT_YELLOW
+const COLOR_BLUE = Color.LIGHT_BLUE
 const COLOR_WHITE = Color.WHITE
-const COLOR_PURPLE = Color.PURPLE
-const COLOR_PINK = Color.PINK
-const COLOR_GREEN = Color.GREEN
+const COLOR_PURPLE = Color.MEDIUM_PURPLE
+const COLOR_PINK = Color.LIGHT_PINK
+const COLOR_GREEN = Color.LIGHT_GREEN
 const COLOR_LIGHT_YELLOW = Color.LIGHT_GOLDENROD
 
 # Called when the node enters the scene tree for the first time.

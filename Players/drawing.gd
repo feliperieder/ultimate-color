@@ -11,6 +11,8 @@ var yellow = false
 var blue = false
 var white = false
 
+var drawing = false
+
 const COLOR_RED = Color.RED
 const COLOR_YELLOW = Color.YELLOW
 const COLOR_BLUE = Color.BLUE
@@ -103,7 +105,8 @@ func _physics_process(delta: float) -> void:
 		
 	if (red or blue or yellow or white) and not level_finished:
 		current_line.add_point(brush.global_position)
-		
+		drawing = true
+	else: drawing = false
 
 func paint(color):
 	if not level_finished:

@@ -20,10 +20,10 @@ color = Color(0.136826, 0.136826, 0.136826, 1)
 
 [node name="LevelLine" parent="." instance=ExtResource("2_d32u7")]
 points = PackedVector2Array(168, 45, 630, 45, 630, 508, 170, 508, 170, 45)
-color = "light_yellow"
+color = "yellow"
 
 [node name="Timer" parent="." instance=ExtResource("1_4rcma")]
-timer_time = 50
+timer_time = 1
 
 [node name="PlayerTest" parent="." instance=ExtResource("2_b3ych")]
 position = Vector2(129, 44)

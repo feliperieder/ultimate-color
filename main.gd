@@ -6,6 +6,8 @@ var points
 @onready var player = $PlayerTest as CharacterBody2D
 @onready var drawing = $Drawing as Node2D
 
+@export var level = 0
+
 const SCORE_MENU_PATH = preload("res://Menus/Score Menu.tscn")
 
 
@@ -21,7 +23,8 @@ func endLevel(points):
 	background.hide()
 	clock.hide()
 	player.hide()
-	drawing.finishingLine()
+	if drawing.drawing:
+		drawing.finishingLine()
 	drawing.level_finished = true
 	MenuScoreInstanciate(points)
 	
@@ -29,5 +32,6 @@ func endLevel(points):
 func MenuScoreInstanciate(points):
 	var score_menu = SCORE_MENU_PATH.instantiate()
 	score_menu.score = points
+	score_menu.level = level
 	add_child(score_menu)
 	
