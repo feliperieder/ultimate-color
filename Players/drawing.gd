@@ -118,6 +118,4 @@ func paint(color):
 		current_line.add_point(brush.global_position + Vector2(0,5))
 
 func finishingLine():
-	if not level_finished:
-		current_line.add_point(brush.global_position - Vector2(0,5))
-		current_line.add_point(brush.global_position + Vector2(0,5))
+	pass

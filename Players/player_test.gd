@@ -11,6 +11,15 @@ var error_layer = 0
 var painting = false
 var player_error = 0
 
+@onready var sprite = $Sprite2D as Sprite2D
+const RED_SPRITE = preload("res://Art/Pencil/LAPIS_vermelho.png")
+const YELLOW_SPRITE = preload("res://Art/Pencil/LAPIS_amarelo.png")
+const BLUE_SPRITE = preload("res://Art/Pencil/LAPIS_azul.png")
+const WHITE_SPRITE = preload("res://Art/Pencil/LAPIS_branco.png")
+const PURPLE_SPRITE = preload("res://Art/Pencil/LAPIS_roxo.png")
+const PINK_SPRITE = preload("res://Art/Pencil/LAPIS_rosa.png")
+const GREEN_SPRITE = preload("res://Art/Pencil/LAPIS_verde.png")
+
 const NEGATIVE_POINT_PATH = preload("res://Points/Negative Points.tscn")
 
 var clock
@@ -38,7 +47,28 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.x, 0, SPEED)
 		
-	if Input.is_action_pressed("blue_color") or Input.is_action_pressed("red_color") or Input.is_action_pressed("white_color") or Input.is_action_just_pressed("yellow_color"):
+	if Input.is_action_pressed("red_color") and not Input.is_action_pressed("blue_color") and not Input.is_action_pressed("white_color"):
+		painting = true
+		sprite.texture = RED_SPRITE
+	elif Input.is_action_pressed("yellow_color") and not Input.is_action_pressed("blue_color") and not Input.is_action_pressed("white_color"):
+		painting = true
+		sprite.texture = YELLOW_SPRITE
+	elif Input.is_action_pressed("blue_color") and not Input.is_action_pressed("red_color") and not Input.is_action_pressed("yellow_color"):
+		painting = true
+		sprite.texture = BLUE_SPRITE
+	elif Input.is_action_pressed("white_color") and not Input.is_action_pressed("red_color") and not Input.is_action_pressed("yellow_color"):
+		painting = true
+		sprite.texture = WHITE_SPRITE
+	elif Input.is_action_pressed("red_color") and Input.is_action_pressed("blue_color"):
+		painting = true
+		sprite.texture = PURPLE_SPRITE
+	elif Input.is_action_pressed("red_color") and Input.is_action_pressed("white_color"):
+		painting = true
+		sprite.texture = PINK_SPRITE
+	elif Input.is_action_pressed("yellow_color") and Input.is_action_pressed("blue_color") :
+		painting = true
+		sprite.texture = GREEN_SPRITE
+	elif Input.is_action_pressed("yellow_color") and Input.is_action_pressed("white_color"):
 		painting = true
 	else:
 		painting = false

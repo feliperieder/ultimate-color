@@ -1,22 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1usyydica8j"]
+[gd_scene load_steps=4 format=3 uid="uid://d1usyydica8j"]
 
 [ext_resource type="Script" path="res://Players/player_test.gd" id="1_2xbe0"]
+[ext_resource type="Texture2D" uid="uid://rgkilh6kih6b" path="res://Art/Pencil/LAPIS_vermelho.png" id="2_umqe2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xhr3"]
-size = Vector2(10, 10)
+[sub_resource type="CircleShape2D" id="CircleShape2D_0idwv"]
+radius = 5.0
 
 [node name="PlayerTest" type="CharacterBody2D" groups=["brush"]]
 z_index = 2
 script = ExtResource("1_2xbe0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="ColorRect" type="ColorRect" parent="." groups=["brush"]]
+visible = false
 offset_left = -5.0
 offset_top = -5.0
 offset_right = 5.0
 offset_bottom = 5.0
 color = Color(1, 0, 0, 1)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(42, -82)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_umqe2")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_6xhr3")
+shape = SubResource("CircleShape2D_0idwv")
