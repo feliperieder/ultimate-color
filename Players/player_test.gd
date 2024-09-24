@@ -7,7 +7,7 @@ var bullet_point = 1.0
 var points = 0.0
 var lost_points = 0.0
 
-var error_layer = 0
+var draw_zone = 0
 var painting = false
 var player_error = 0
 
@@ -73,7 +73,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		painting = false
 
-	if error_layer != 0 and painting and player_error == 0:
+	if draw_zone == 0 and painting and player_error == 0:
 		losePoint()
 	
 	timerPontuation()
@@ -91,7 +91,7 @@ func losePoint():
 	get_parent().add_child(negative_point)
 	negative_point.global_position= global_position
 	
-	lost_points += bullet_point/2
+	lost_points += bullet_point * 5
 
 func timerPontuation():
 	if current_bullets <= 0:
@@ -101,7 +101,7 @@ func timerPontuation():
 
 func endLevel(timer_points = 0):
 	if not game_ended:
-		points = int((points + timer_points - lost_points) *10) 
+		points = int((points + timer_points - lost_points) * 100) 
 		if points <= 0:
 			points = 0
 		game_ended = true

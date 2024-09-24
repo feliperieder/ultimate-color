@@ -1,12 +1,13 @@
 extends Line2D
 
 
-const OBJECT_SCENE_PATH = preload("res://Points/Positive Points.tscn")
+const POSITIVE_POINTS_PATH = preload("res://Points/Positive Points.tscn")
+const DRAW_ZONE_PATH = preload("res://Points/DrawZone.tscn")
 const SPACING = 1  # Espaçamento entre os objetos
 
 @export_enum("red", "yellow", "blue", "white", "purple", "pink", "light_yellow", "green") var color = "red"
 const COLOR_RED = Color.INDIAN_RED
-const COLOR_YELLOW = Color.LIGHT_YELLOW
+const COLOR_YELLOW = Color.KHAKI
 const COLOR_BLUE = Color.LIGHT_BLUE
 const COLOR_WHITE = Color.WHITE
 const COLOR_PURPLE = Color.MEDIUM_PURPLE
@@ -23,6 +24,7 @@ func _ready() -> void:
 	var player = get_tree().get_first_node_in_group("brush")
 	player.current_bullets = bullets
 	player.bullet_point = player.MAX_POINTS / bullets
+	
 
 # Função para preencher a linha com objetos
 func fill_line_with_objects() -> void:
@@ -37,10 +39,20 @@ func fill_line_with_objects() -> void:
 		for j in range(num_objects):
 			# Calcular a posição usando linear_interpolate
 			var position = start_point.lerp(end_point, j / float(num_objects))
-			var instance = OBJECT_SCENE_PATH.instantiate()
+			instanciatePoints(position)
+			instanciateDrawZone(position)
+
+func instanciatePoints(position):
+			var instance = POSITIVE_POINTS_PATH.instantiate()
 			instance.color = color
 			instance.position = position
 			add_child(instance)  # Adiciona o objeto à cena
+			
+func instanciateDrawZone(position):
+		var instance = DRAW_ZONE_PATH.instantiate()
+		instance.position = position
+		add_child(instance)  # Adiciona o objeto à cena
+	
 
 func setColor():
 	match color:

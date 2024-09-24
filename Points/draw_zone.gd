@@ -13,9 +13,9 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("brush"):
-		body.error_layer += 1
+		body.draw_zone += 1
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("brush"):
-		body.error_layer -= 1
+		body.draw_zone -= 1

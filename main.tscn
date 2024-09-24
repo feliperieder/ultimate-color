@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="1_dq840"]
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="2_b3ych"]
 [ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="2_d32u7"]
-[ext_resource type="PackedScene" uid="uid://bxe7hbmljjogw" path="res://Points/error_zone.tscn" id="5_xmm56"]
+[ext_resource type="PackedScene" uid="uid://bxe7hbmljjogw" path="res://Points/DrawZone.tscn" id="5_xmm56"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_7xp4k")
@@ -29,23 +29,19 @@ timer_time = 45
 position = Vector2(129, 44)
 
 [node name="Error Zone" parent="." instance=ExtResource("5_xmm56")]
-position = Vector2(65, 281)
-scale = Vector2(9.62827, 28.8529)
+position = Vector2(170, 282)
+scale = Vector2(0.988271, 24.6129)
 
 [node name="Error Zone2" parent="." instance=ExtResource("5_xmm56")]
-position = Vector2(737, 286)
-scale = Vector2(9.62827, 28.8529)
+position = Vector2(631, 278)
+scale = Vector2(0.508267, 23.8929)
 
 [node name="Error Zone3" parent="." instance=ExtResource("5_xmm56")]
-position = Vector2(401, 544)
-scale = Vector2(25.3483, 2.8129)
+position = Vector2(403, 507)
+scale = Vector2(23.3083, 0.852903)
 
 [node name="Error Zone4" parent="." instance=ExtResource("5_xmm56")]
-position = Vector2(403, 7)
-scale = Vector2(25.3483, 2.8129)
-
-[node name="Error Zone5" parent="." instance=ExtResource("5_xmm56")]
-position = Vector2(402, 277)
-scale = Vector2(22, 22)
+position = Vector2(408, 44)
+scale = Vector2(24.243, 0.939143)
 
 [node name="Drawing" parent="." instance=ExtResource("1_dq840")]

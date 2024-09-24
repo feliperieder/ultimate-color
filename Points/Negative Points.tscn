@@ -6,6 +6,7 @@
 radius = 5.0
 
 [node name="NegativePoints" type="Area2D"]
+z_index = 5
 script = ExtResource("1_vo8nb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

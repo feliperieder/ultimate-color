@@ -1,6 +1,8 @@
 extends Node2D
 var points
 
+const LAST_LEVEL = 1
+
 @onready var background = $LevelLine as Line2D
 @onready var clock = $Timer as Node2D
 @onready var player = $PlayerTest as CharacterBody2D
@@ -32,6 +34,7 @@ func endLevel(points):
 func MenuScoreInstanciate(points):
 	var score_menu = SCORE_MENU_PATH.instantiate()
 	score_menu.score = points
+	ScoreSystem.total_score += points
 	score_menu.level = level
 	add_child(score_menu)
 	

@@ -6,6 +6,7 @@
 radius = 1.0
 
 [node name="PositivePoints" type="Area2D" groups=["positive_point"]]
+z_index = 5
 script = ExtResource("1_fkq57")
 color = "red"
 

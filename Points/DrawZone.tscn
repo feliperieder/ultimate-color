@@ -1,13 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxe7hbmljjogw"]
 
-[ext_resource type="Script" path="res://Points/error_zone.gd" id="1_iiwm0"]
+[ext_resource type="Script" path="res://Points/draw_zone.gd" id="1_nfdca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0trug"]
 
-[node name="Error Zone" type="Area2D" groups=["error"]]
-script = ExtResource("1_iiwm0")
+[node name="Error Zone" type="Area2D" groups=["drawZone"]]
+z_index = -1
+script = ExtResource("1_nfdca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0trug")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
