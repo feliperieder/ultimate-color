@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://cp1k1cavisb5e"]
+[gd_scene load_steps=2 format=3 uid="uid://cp1k1cavisb5e"]
+
+[ext_resource type="Script" path="res://Menus/menu.gd" id="1_nbucm"]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_nbucm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -17,5 +20,18 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Start" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+text = "Start"
+
+[node name="Score" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Quit" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Score" to="." method="_on_score_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
