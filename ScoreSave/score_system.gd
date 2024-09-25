@@ -34,7 +34,7 @@ func loadScore():
 	#else:
 		#high_scores = []
 
-func resetScore(initials = "aa"):
+func resetScore(initials = "TOP10"):
 	high_scores.append([initials, total_score])
 	high_scores.sort_custom(_sort_scores)  # Ordena usando uma função personalizada
 	if high_scores.size() > 10:

@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 				if drawing.blue and drawing.red:
 					givePoint()
 			"green":
-				if drawing.yellow and drawing.red:
+				if drawing.blue and drawing.yellow:
 					givePoint()
 			"pink":
 				if drawing.red and drawing.white:

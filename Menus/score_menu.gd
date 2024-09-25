@@ -10,7 +10,7 @@ var level
 var next_level
 
 const MINIMUM_SCORE = 7000
-const LAST_LEVEL = 1
+const LAST_LEVEL = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
