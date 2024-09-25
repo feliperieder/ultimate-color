@@ -1,8 +1,6 @@
 extends Node2D
 var points
 
-const LAST_LEVEL = 1
-
 @onready var background = $LevelLine as Line2D
 @onready var clock = $Timer as Node2D
 @onready var player = $PlayerTest as CharacterBody2D
@@ -11,7 +9,6 @@ const LAST_LEVEL = 1
 @export var level = 0
 
 const SCORE_MENU_PATH = preload("res://Menus/Score Menu.tscn")
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,4 +34,3 @@ func MenuScoreInstanciate(points):
 	ScoreSystem.total_score += points
 	score_menu.level = level
 	add_child(score_menu)
-	
