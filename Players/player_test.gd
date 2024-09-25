@@ -86,12 +86,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		painting = false
 
-	if draw_zone == 0 and painting:
+	if draw_zone == 0 and painting and not game_ended:
 		animation.play("angry")
 		if player_error == 0:
 			losePoint()
 	else:
-		animation.play("default")
+		if int(clock.timer.time_left) % 10 == 0 and not game_ended:
+			animation.play("default")
 	
 	timerPontuation()
 
@@ -122,4 +123,5 @@ func endLevel(timer_points = 0):
 		if points <= 0:
 			points = 0
 		game_ended = true
+		animation.stop()
 		get_parent().endLevel(points)

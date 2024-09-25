@@ -5,7 +5,7 @@ var points
 @onready var clock = $Timer as Node2D
 @onready var player = $PlayerTest as CharacterBody2D
 @onready var drawing = $Drawing as Node2D
-@onready var animation = $AnimatedSprite2D as AnimatedSprite2D
+@onready var animation = $animation as AnimatedSprite2D
 
 @export var level = 0
 
@@ -26,8 +26,7 @@ func endLevel(points):
 	if drawing.drawing:
 		drawing.finishingLine()
 	drawing.level_finished = true
-	MenuScoreInstanciate(points)
-	
+	MenuScoreInstanciate(points)	
 
 func MenuScoreInstanciate(points):
 	var score_menu = SCORE_MENU_PATH.instantiate()
