@@ -27,7 +27,6 @@ func _ready() -> void:
 		score_label.text = str("LEVEL SCORE: ", score, "\nYOU BEAT THE GAME!!!")
 		button.text = "Back to Menu"
 		next_level = MENU_PATH
-	print(next_level)
 	button.grab_focus()
 
 

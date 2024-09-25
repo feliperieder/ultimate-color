@@ -26,11 +26,14 @@ var clock
 var current_bullets
 var game_ended = false
 
+var animation
+
 func _ready() -> void:
 	clock = get_tree().get_first_node_in_group("timer")
 	var bullets = get_tree().get_node_count_in_group("positive_point")
 	current_bullets = bullets
 	bullet_point = MAX_POINTS / bullets
+	animation = get_tree().get_first_node_in_group("animation")
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
@@ -41,11 +44,21 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
+	if global_position.x < 391:
+		global_position.x = 391
+	elif global_position.x > 965:
+		global_position.x = 965
+	
 	var direction_v := Input.get_axis("ui_up", "ui_down")
 	if direction_v:
 		velocity.y = direction_v * SPEED
 	else:
 		velocity.y = move_toward(velocity.x, 0, SPEED)
+		
+	if global_position.y < 265:
+		global_position.y = 265
+	elif global_position.y > 840:
+		global_position.y = 840
 		
 	if Input.is_action_pressed("red_color") and not Input.is_action_pressed("blue_color") and not Input.is_action_pressed("white_color"):
 		painting = true
@@ -73,8 +86,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		painting = false
 
-	if draw_zone == 0 and painting and player_error == 0:
-		losePoint()
+	if draw_zone == 0 and painting:
+		animation.play("angry")
+		if player_error == 0:
+			losePoint()
+	else:
+		animation.play("default")
 	
 	timerPontuation()
 

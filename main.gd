@@ -5,6 +5,7 @@ var points
 @onready var clock = $Timer as Node2D
 @onready var player = $PlayerTest as CharacterBody2D
 @onready var drawing = $Drawing as Node2D
+@onready var animation = $AnimatedSprite2D as AnimatedSprite2D
 
 @export var level = 0
 
