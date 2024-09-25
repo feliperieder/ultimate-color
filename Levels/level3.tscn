@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv5fvvd0jgakp"]
+[gd_scene load_steps=8 format=3 uid="uid://c2x58nk0qbvk6"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_cxed1"]
 [ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_2ku6a"]
@@ -10,21 +10,23 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cxed1")
-level = 3
+level = 2
 
-[node name="BgAzul" type="Sprite2D" parent="." groups=["animation"]]
+[node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_2ku6a")
 
 [node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
-timer_time = 60
+timer_time = 45
 
 [node name="PlayerTest" parent="." instance=ExtResource("4_0cjo1")]
 position = Vector2(494, 324)
 
 [node name="Drawing" parent="." instance=ExtResource("5_xqv1e")]
+
+[node name="animation" parent="." instance=ExtResource("7_ok3on")]
 
 [node name="LevelLine" parent="." instance=ExtResource("6_jw5eh")]
 scale = Vector2(0.962102, 0.984122)
@@ -49,5 +51,3 @@ color = "white"
 position = Vector2(736, 624)
 points = PackedVector2Array(88, -8, 0, -8, 0, -80, 88, -80, 88, -8)
 color = "white"
-
-[node name="animation" parent="." instance=ExtResource("7_ok3on")]
