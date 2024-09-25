@@ -4,15 +4,16 @@
 [ext_resource type="Script" path="res://main.gd" id="1_7xp4k"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="1_dq840"]
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="2_b3ych"]
-[ext_resource type="Texture2D" uid="uid://cr271hvfgeikh" path="res://Images/design_esboco_2.png" id="2_bp1ys"]
 [ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="2_d32u7"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_wnwuy"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_7xp4k")
 
-[node name="DesignEsboco2" type="Sprite2D" parent="."]
-position = Vector2(640, 441)
-texture = ExtResource("2_bp1ys")
+[node name="BgAzul" type="Sprite2D" parent="."]
+position = Vector2(640, 480)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_wnwuy")
 
 [node name="LevelLine" parent="." instance=ExtResource("2_d32u7")]
 position = Vector2(270, 257)
@@ -20,9 +21,9 @@ points = PackedVector2Array(212, 85, 569, 85, 569, 475, 213, 475, 212, 85)
 color = "yellow"
 
 [node name="Timer" parent="." instance=ExtResource("1_4rcma")]
-timer_time = 5
+timer_time = 45
 
 [node name="PlayerTest" parent="." instance=ExtResource("2_b3ych")]
-position = Vector2(129, 44)
+position = Vector2(494, 324)
 
 [node name="Drawing" parent="." instance=ExtResource("1_dq840")]

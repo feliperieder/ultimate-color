@@ -5,7 +5,6 @@ extends Node2D
 @onready var button = $CanvasLayer/VBoxContainer/Button as Button
 
 var score
-
 var level
 var next_level
 
@@ -21,7 +20,8 @@ func _ready() -> void:
 		next_level = "res://Levels/level%s.tscn"%[level+1]
 	elif score < MINIMUM_SCORE:
 		button.text = "Try Again"
-		next_level = "res://Menus/Menu.tscn"
+		next_level = "res://Menus/high_score_menu.gd"
+	button.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

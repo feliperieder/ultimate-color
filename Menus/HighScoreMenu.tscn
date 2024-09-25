@@ -1,3 +1,62 @@
-[gd_scene format=3 uid="uid://b4t6mwkew00h4"]
+[gd_scene load_steps=6 format=3 uid="uid://b4t6mwkew00h4"]
+
+[ext_resource type="Script" path="res://Menus/high_score_menu.gd" id="1_hrbgn"]
+[ext_resource type="FontFile" uid="uid://cvlmj01u6oxdv" path="res://Art/fonts/GrapeSoda.ttf" id="2_ggofq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kowka"]
+font = ExtResource("2_ggofq")
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_c2onk"]
+font = ExtResource("2_ggofq")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_xx6ro"]
+font = ExtResource("2_ggofq")
+font_size = 30
 
 [node name="HighScoreMenu" type="Node2D"]
+script = ExtResource("1_hrbgn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -295.5
+offset_top = -42.5
+offset_right = 295.5
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "TOP 10 HIGHEST SCORES"
+label_settings = SubResource("LabelSettings_kowka")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TagName" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+label_settings = SubResource("LabelSettings_c2onk")
+
+[node name="Score_label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+label_settings = SubResource("LabelSettings_xx6ro")
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]

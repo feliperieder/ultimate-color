@@ -1,18 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfp2oqagyu7fm"]
+[gd_scene load_steps=5 format=3 uid="uid://dfp2oqagyu7fm"]
 
 [ext_resource type="Script" path="res://Menus/score_menu.gd" id="1_euoh0"]
-[ext_resource type="FontFile" uid="uid://dua46iacg3fcv" path="res://Art/Ldfcomicsans-jj7l.ttf" id="1_ja20c"]
-[ext_resource type="FontFile" uid="uid://bnlwgju1c5ygl" path="res://Art/Ldfcomicsansbold-zgma.ttf" id="3_wiidx"]
+[ext_resource type="FontFile" uid="uid://cvlmj01u6oxdv" path="res://Art/fonts/GrapeSoda.ttf" id="2_fgbbc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ket5"]
-font = ExtResource("1_ja20c")
+font = ExtResource("2_fgbbc")
 font_size = 100
-font_color = Color(0.345098, 0, 0.466667, 1)
+font_color = Color(1, 0.870588, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1e5uh"]
-font = ExtResource("3_wiidx")
+font = ExtResource("2_fgbbc")
 font_size = 50
-font_color = Color(0.345098, 0, 0.466667, 1)
+font_color = Color(1, 0.870588, 0, 1)
 
 [node name="ScoreMenu" type="Node2D"]
 script = ExtResource("1_euoh0")

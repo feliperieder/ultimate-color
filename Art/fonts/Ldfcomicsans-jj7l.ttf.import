@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bnlwgju1c5ygl"
-path="res://.godot/imported/Ldfcomicsansbold-zgma.ttf-2c898fcca9e26c330450b25145d107aa.fontdata"
+uid="uid://dua46iacg3fcv"
+path="res://.godot/imported/Ldfcomicsans-jj7l.ttf-b7377773a54860235240a7e517db1816.fontdata"
 
 [deps]
 
-source_file="res://Art/Ldfcomicsansbold-zgma.ttf"
-dest_files=["res://.godot/imported/Ldfcomicsansbold-zgma.ttf-2c898fcca9e26c330450b25145d107aa.fontdata"]
+source_file="res://Art/fonts/Ldfcomicsans-jj7l.ttf"
+dest_files=["res://.godot/imported/Ldfcomicsans-jj7l.ttf-b7377773a54860235240a7e517db1816.fontdata"]
 
 [params]
 
