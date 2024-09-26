@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 ScoreSystem="*res://ScoreSave/score_system.gd"
+Music="*res://Music/Music.tscn"
 
 [display]
 

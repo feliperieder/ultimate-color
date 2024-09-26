@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnub3cy70a16x"
+path="res://.godot/imported/Kevin MacLeod - Itty Bitty 8 Bit.mp3-ebf5d1f86268dc9a47d49d85219ca2ac.mp3str"
+
+[deps]
+
+source_file="res://Music/Kevin MacLeod - Itty Bitty 8 Bit.mp3"
+dest_files=["res://.godot/imported/Kevin MacLeod - Itty Bitty 8 Bit.mp3-ebf5d1f86268dc9a47d49d85219ca2ac.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=1.0
+bpm=0.0
+beat_count=0
+bar_beats=4

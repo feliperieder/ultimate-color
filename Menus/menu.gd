@@ -8,6 +8,7 @@ const TUTORIAL_PATH = "res://Menus/TutorialMenu.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$VBoxContainer/HBoxContainer/Start.grab_focus()
+	Music.playMenuMusic()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,6 +17,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	Music.playLevelMusic()
 	get_tree().change_scene_to_file(FIRST_LEVEL_PATH)
 
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hi02y4u6v3db"
+path="res://.godot/imported/Eric Skiff - Underclocked (underunderclocked mix).mp3-2fd2ccabba080d91fe44ae689d2fad4b.mp3str"
+
+[deps]
+
+source_file="res://Music/Eric Skiff - Underclocked (underunderclocked mix).mp3"
+dest_files=["res://.godot/imported/Eric Skiff - Underclocked (underunderclocked mix).mp3-2fd2ccabba080d91fe44ae689d2fad4b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=1.0
+bpm=0.0
+beat_count=0
+bar_beats=4
