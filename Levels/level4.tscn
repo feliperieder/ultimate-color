@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccb88my815yj8"]
+[gd_scene load_steps=8 format=3 uid="uid://ccb88my815yj8"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_bwc0u"]
 [ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_t78oi"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_dqqbi"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_gxire"]
 [ext_resource type="PackedScene" uid="uid://gc3bvop65cqu" path="res://animation.tscn" id="7_b4wjd"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="7_guf6i"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_bwc0u")
@@ -26,3 +27,23 @@ position = Vector2(494, 324)
 [node name="Drawing" parent="." instance=ExtResource("5_gxire")]
 
 [node name="animation" parent="." instance=ExtResource("7_b4wjd")]
+
+[node name="LevelLine" parent="." instance=ExtResource("7_guf6i")]
+position = Vector2(4, 70)
+points = PackedVector2Array(650, 300, 550, 500)
+color = "blue"
+
+[node name="LevelLine2" parent="." instance=ExtResource("7_guf6i")]
+position = Vector2(4, 70)
+points = PackedVector2Array(650, 300, 750, 500)
+color = "yellow"
+
+[node name="LevelLine4" parent="." instance=ExtResource("7_guf6i")]
+position = Vector2(4, 70)
+points = PackedVector2Array(550, 500, 650, 700)
+color = "purple"
+
+[node name="LevelLine3" parent="." instance=ExtResource("7_guf6i")]
+position = Vector2(4, 70)
+points = PackedVector2Array(750, 500, 650, 700)
+color = "green"

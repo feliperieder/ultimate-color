@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 		yellow = true
 		if blue or Input.is_action_pressed("blue_color"):
 			paint(COLOR_GREEN)
-		elif white or Input.is_action_pressed("white"):
+		elif white or Input.is_action_pressed("white_color"):
 			paint(COLOR_LIGHT_YELLOW)
 		else:
 			paint(COLOR_YELLOW)

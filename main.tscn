@@ -23,7 +23,7 @@ points = PackedVector2Array(212, 85, 569, 85, 569, 475, 213, 475, 212, 85)
 color = "yellow"
 
 [node name="Timer" parent="." instance=ExtResource("1_4rcma")]
-timer_time = 30
+timer_time = 25
 
 [node name="PlayerTest" parent="." instance=ExtResource("2_b3ych")]
 position = Vector2(419, 306)
