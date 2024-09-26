@@ -13,13 +13,13 @@ var white = false
 
 var drawing = false
 
-const COLOR_RED = Color.RED
-const COLOR_YELLOW = Color.YELLOW
-const COLOR_BLUE = Color.BLUE
+const COLOR_RED = Color(0.675, 0.196, 0.196)
+const COLOR_YELLOW = Color(0.882, 0.729, 0.09)
+const COLOR_BLUE = Color(0.388, 0.608, 1)
 const COLOR_WHITE = Color.WHITE
-const COLOR_PURPLE = Color.PURPLE
-const COLOR_PINK = Color.PINK
-const COLOR_GREEN = Color.GREEN
+const COLOR_PURPLE = Color(0.463, 0.259, 0.541)
+const COLOR_PINK = Color.HOT_PINK
+const COLOR_GREEN = Color(0.294, 0.412, 0.184)
 const COLOR_LIGHT_YELLOW = Color.LIGHT_GOLDENROD
 
 var level_finished = false

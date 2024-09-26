@@ -24,7 +24,7 @@ position = Vector2(419, 306)
 
 [node name="Timer" parent="." instance=ExtResource("7_v6ubg")]
 position = Vector2(1165, 84)
-timer_time = 20
+timer_time = 25
 
 [node name="UILayer" parent="." instance=ExtResource("7_8x0ow")]
 
