@@ -1,45 +1,72 @@
-[gd_scene load_steps=7 format=3 uid="uid://bg7ifbqiaaka"]
+[gd_scene load_steps=13 format=3 uid="uid://bg7ifbqiaaka"]
 
 [ext_resource type="Script" path="res://Menus/tutorial_menu.gd" id="1_r7d0e"]
-[ext_resource type="FontFile" uid="uid://cvlmj01u6oxdv" path="res://Art/fonts/GrapeSoda.ttf" id="2_wamdh"]
+[ext_resource type="Texture2D" uid="uid://b6fqdceq40ibm" path="res://Art/Tutorial/tutorial_desenhar.png" id="3_5slf8"]
 [ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="3_8h2n1"]
 [ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="4_vc4th"]
+[ext_resource type="Texture2D" uid="uid://cix7icbm58p64" path="res://Art/Tutorial/tutorial_misturar.png" id="4_x0qtx"]
+[ext_resource type="Texture2D" uid="uid://cndyy6djnu8gy" path="res://Art/Tutorial/tutorial_mexer.png" id="5_o323m"]
 [ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="5_y3onx"]
+[ext_resource type="Texture2D" uid="uid://cnveo1c7f11m1" path="res://Art/Tutorial/tutorial_pintar.png" id="6_kipd4"]
+[ext_resource type="Texture2D" uid="uid://4fib7jva2ugk" path="res://Art/Buttons/Next/botao_proximo.png" id="9_c7m34"]
+[ext_resource type="Texture2D" uid="uid://bd3lsp7iicnfe" path="res://Art/Buttons/Next/botao_proximo_apertado.png" id="10_ubwgl"]
+[ext_resource type="Texture2D" uid="uid://dayqkh7t7f5af" path="res://Art/Buttons/Next/botao_proximo_hover.png" id="11_3d2fh"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_kowka"]
-font = ExtResource("2_wamdh")
-font_size = 60
+[sub_resource type="SpriteFrames" id="SpriteFrames_5srj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_kipd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5slf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x0qtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o323m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.75
+}]
 
 [node name="TutorialMenu" type="Node2D"]
 script = ExtResource("1_r7d0e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -295.5
-offset_top = -42.5
-offset_right = 295.5
-offset_bottom = 42.5
+[node name="Slide" type="AnimatedSprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(640, 480)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_5srj6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.467187
+anchor_top = 0.891667
+anchor_right = 0.532812
+anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
+grow_vertical = 0
+size_flags_vertical = 8
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-text = "COMO JOGAR"
-label_settings = SubResource("LabelSettings_kowka")
-horizontal_alignment = 1
-
-[node name="Button" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+[node name="QuitButton" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("3_8h2n1")
 texture_pressed = ExtResource("4_vc4th")
 texture_focused = ExtResource("5_y3onx")
 
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="NextButton" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("9_c7m34")
+texture_pressed = ExtResource("10_ubwgl")
+texture_focused = ExtResource("11_3d2fh")
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]

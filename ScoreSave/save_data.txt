@@ -1,10 +1,2 @@
-Rieder:43453
-Uni:41241
-Duni:30045
-Foguinho:29758
-Ettin:25653
-Uni:25404
-Unite:25371
-Foguinho:25194
-Duni:24029
-TOP10:23563
+Rieder:25371
+Foguinho:22223
