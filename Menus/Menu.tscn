@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://cp1k1cavisb5e"]
+[gd_scene load_steps=15 format=3 uid="uid://cp1k1cavisb5e"]
 
 [ext_resource type="Script" path="res://Menus/menu.gd" id="1_nbucm"]
+[ext_resource type="Texture2D" uid="uid://bmvmqwfj3au1r" path="res://Art/Buttons/menu_esboco.png" id="2_bcw37"]
 [ext_resource type="Texture2D" uid="uid://dkfe5i6hjpypy" path="res://Art/Buttons/botao_jogar_normal.png" id="2_ujjxg"]
 [ext_resource type="Texture2D" uid="uid://bi6x41uq3oq7q" path="res://Art/Buttons/botao_jogar_apertado.png" id="3_nnn1v"]
 [ext_resource type="Texture2D" uid="uid://bfce6nixuwetb" path="res://Art/Buttons/botao_recordes_normal.png" id="4_1ruxu"]
@@ -17,56 +18,61 @@
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_nbucm")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="MenuEsboco" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(640, 482)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_bcw37")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -60.0
-offset_right = 89.0
-offset_bottom = 60.0
+offset_left = 204.0
+offset_top = 485.0
+offset_right = 381.0
+offset_bottom = 605.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2.5, 2.5)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Start" type="TextureButton" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="Start" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("2_ujjxg")
 texture_pressed = ExtResource("3_nnn1v")
 texture_focused = ExtResource("4_i8ao7")
 
-[node name="Score" type="TextureButton" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="Score" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("4_1ruxu")
 texture_pressed = ExtResource("5_csi6s")
 texture_focused = ExtResource("6_7dw3h")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="HowToPlay" type="TextureButton" parent="CanvasLayer/VBoxContainer/HBoxContainer2"]
+[node name="HowToPlay" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("7_14mna")
 texture_pressed = ExtResource("8_j0ixr")
 texture_focused = ExtResource("9_acyp5")
 
-[node name="Quit" type="TextureButton" parent="CanvasLayer/VBoxContainer/HBoxContainer2"]
+[node name="Quit" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("10_370pr")
 texture_pressed = ExtResource("11_7pfo5")
 texture_focused = ExtResource("12_e5nt5")
 
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/Score" to="." method="_on_score_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer2/HowToPlay" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer2/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Score" to="." method="_on_score_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Quit" to="." method="_on_quit_pressed"]
