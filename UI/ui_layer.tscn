@@ -15,4 +15,4 @@ size_flags_vertical = 0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="animation" parent="CanvasLayer" instance=ExtResource("1_5mfve")]
-position = Vector2(625, 86)
+position = Vector2(596, 100)
