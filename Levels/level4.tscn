@@ -19,7 +19,7 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_t78oi")
 
 [node name="Timer" parent="." instance=ExtResource("3_s6fvl")]
-timer_time = 45
+timer_time = 25
 
 [node name="PlayerTest" parent="." instance=ExtResource("4_dqqbi")]
 position = Vector2(494, 324)

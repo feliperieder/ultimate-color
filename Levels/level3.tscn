@@ -10,7 +10,7 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cxed1")
-level = 2
+level = 3
 
 [node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -19,7 +19,7 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_2ku6a")
 
 [node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
-timer_time = 50
+timer_time = 55
 
 [node name="PlayerTest" parent="." instance=ExtResource("4_0cjo1")]
 position = Vector2(494, 324)
