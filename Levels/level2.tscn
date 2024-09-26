@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvj0yn3lhw66s"]
+[gd_scene load_steps=8 format=3 uid="uid://dvj0yn3lhw66s"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_rl64h"]
 [ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_0okmo"]
+[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_bptgo"]
 [ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_xutns"]
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_htgu5"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_58c32"]
@@ -10,6 +11,8 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_rl64h")
 level = 2
+
+[node name="UILayer" parent="." instance=ExtResource("2_bptgo")]
 
 [node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1
