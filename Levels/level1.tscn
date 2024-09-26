@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvgpwovn1coao"]
+[gd_scene load_steps=7 format=3 uid="uid://dvgpwovn1coao"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ns2qd"]
 [ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_idswf"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="4_w6k7w"]
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="5_4bgaw"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="6_n5uim"]
-[ext_resource type="PackedScene" uid="uid://gc3bvop65cqu" path="res://animation.tscn" id="7_gwa5w"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ns2qd")
@@ -18,9 +17,6 @@ position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_idswf")
 
-[node name="Timer" parent="." instance=ExtResource("4_w6k7w")]
-timer_time = 20
-
 [node name="PlayerTest" parent="." instance=ExtResource("5_4bgaw")]
 position = Vector2(494, 324)
 
@@ -30,4 +26,6 @@ position = Vector2(494, 324)
 points = PackedVector2Array(470, 330, 470, 740, 880, 740, 470, 330)
 color = "blue"
 
-[node name="animation" parent="." instance=ExtResource("7_gwa5w")]
+[node name="Timer" parent="." instance=ExtResource("4_w6k7w")]
+position = Vector2(1165, 84)
+timer_time = 20

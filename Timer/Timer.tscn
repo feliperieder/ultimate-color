@@ -13,16 +13,17 @@ z_index = 3
 script = ExtResource("1_k2lke")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 55.0
+offset_left = -56.0
+offset_top = -32.0
+offset_right = 60.0
+offset_bottom = 28.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 label_settings = SubResource("LabelSettings_wxfn5")

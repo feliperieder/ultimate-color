@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2x58nk0qbvk6"]
+[gd_scene load_steps=7 format=3 uid="uid://c2x58nk0qbvk6"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_cxed1"]
 [ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_2ku6a"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_0cjo1"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_xqv1e"]
 [ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="6_jw5eh"]
-[ext_resource type="PackedScene" uid="uid://gc3bvop65cqu" path="res://animation.tscn" id="7_ok3on"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cxed1")
@@ -18,15 +17,10 @@ position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_2ku6a")
 
-[node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
-timer_time = 55
-
 [node name="PlayerTest" parent="." instance=ExtResource("4_0cjo1")]
 position = Vector2(494, 324)
 
 [node name="Drawing" parent="." instance=ExtResource("5_xqv1e")]
-
-[node name="animation" parent="." instance=ExtResource("7_ok3on")]
 
 [node name="LevelLine" parent="." instance=ExtResource("6_jw5eh")]
 scale = Vector2(0.962102, 0.984122)
@@ -61,3 +55,7 @@ color = "green"
 position = Vector2(408, 808)
 points = PackedVector2Array(456, -56, 544, -56)
 color = "green"
+
+[node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
+position = Vector2(1165, 84)
+timer_time = 50

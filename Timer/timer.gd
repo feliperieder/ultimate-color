@@ -1,8 +1,7 @@
 extends Node2D
 
 @onready var timer = $Timer as Timer
-@onready var timer_label = $CanvasLayer/Label as Label
-
+@onready var timer_label = $Label as Label
 @export var timer_time = 90
 
 #Variáveis de tempo

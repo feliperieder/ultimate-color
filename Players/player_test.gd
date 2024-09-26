@@ -93,6 +93,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		if int(clock.timer.time_left) % 10 == 0 and not game_ended:
 			animation.play("default")
+			pass
 	
 	timerPontuation()
 

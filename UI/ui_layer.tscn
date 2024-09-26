@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://i6nu1j1564eq"]
+
+[ext_resource type="PackedScene" uid="uid://gc3bvop65cqu" path="res://UI/animation.tscn" id="1_5mfve"]
+
+[node name="UILayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="animation" parent="CanvasLayer" instance=ExtResource("1_5mfve")]
+position = Vector2(625, 86)

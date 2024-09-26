@@ -2,12 +2,13 @@ extends Node2D
 var points
 
 @onready var background = $LevelLine as Line2D
-@onready var clock = $Timer as Node2D
 @onready var player = $PlayerTest as CharacterBody2D
 @onready var drawing = $Drawing as Node2D
-@onready var animation = $animation as AnimatedSprite2D
+@onready var clock = $Timer as Node2D
+@onready var animation = $UILayer/CanvasLayer/animation as AnimatedSprite2D
 
 @export var level = 0
+@export var time = 20
 
 const SCORE_MENU_PATH = preload("res://Menus/Score Menu.tscn")
 
