@@ -30,31 +30,33 @@ position = Vector2(494, 324)
 
 [node name="Drawing" parent="." instance=ExtResource("5_g6mav")]
 
-[node name="LevelLine3" parent="." instance=ExtResource("6_j2mg7")]
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="LevelLine3" parent="Lines" instance=ExtResource("6_j2mg7")]
 position = Vector2(24, 110)
 points = PackedVector2Array(618, 574, 650, 598, 682, 574)
 color = "white"
 
-[node name="LevelLine2" parent="." instance=ExtResource("6_j2mg7")]
+[node name="LevelLine2" parent="Lines" instance=ExtResource("6_j2mg7")]
 position = Vector2(24, 110)
 points = PackedVector2Array(450, 400, 620, 570, 680, 570, 850, 400)
 color = "pink"
 
-[node name="LevelLine4" parent="." instance=ExtResource("6_j2mg7")]
+[node name="LevelLine4" parent="Lines" instance=ExtResource("6_j2mg7")]
 position = Vector2(24, 110)
 points = PackedVector2Array(635, 566, 550, 398, 610, 302)
 color = "blue"
 
-[node name="LevelLine5" parent="." instance=ExtResource("6_j2mg7")]
+[node name="LevelLine5" parent="Lines" instance=ExtResource("6_j2mg7")]
 position = Vector2(24, 110)
 points = PackedVector2Array(665, 566, 750, 398, 700, 302)
 color = "yellow"
 
-[node name="LevelLine6" parent="." instance=ExtResource("6_j2mg7")]
+[node name="LevelLine6" parent="Lines" instance=ExtResource("6_j2mg7")]
 position = Vector2(26, 108)
 points = PackedVector2Array(650, 574, 650, 302)
 color = "green"
 
-[node name="LevelLine" parent="." instance=ExtResource("6_j2mg7")]
+[node name="LevelLine" parent="Lines" instance=ExtResource("6_j2mg7")]
 position = Vector2(24, 110)
 points = PackedVector2Array(550, 300, 750, 300, 850, 400, 450, 400, 550, 300)

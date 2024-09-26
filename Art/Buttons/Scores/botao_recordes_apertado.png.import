@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n15olu7vc2d3"
-path="res://.godot/imported/botao_jogar_hover.png-709acfc0d3193890b49a83a80e72a56e.ctex"
+uid="uid://vptt8x81whvx"
+path="res://.godot/imported/botao_recordes_apertado.png-18eecbd86fcae12794583923bfa0f074.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Buttons/botao_jogar_hover.png"
-dest_files=["res://.godot/imported/botao_jogar_hover.png-709acfc0d3193890b49a83a80e72a56e.ctex"]
+source_file="res://Art/Buttons/Scores/botao_recordes_apertado.png"
+dest_files=["res://.godot/imported/botao_recordes_apertado.png-18eecbd86fcae12794583923bfa0f074.ctex"]
 
 [params]
 

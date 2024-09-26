@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drmu7rxl06mqe"
-path="res://.godot/imported/botao_como_jogar_hover.png-76413ac9444e6b0c3f16ce7476ae2938.ctex"
+uid="uid://dnve8ynepwgak"
+path="res://.godot/imported/botao_jogar_denovo_hover.png-77fe6abd109a85c2d5c2cb3baf8a5ea2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Buttons/botao_como_jogar_hover.png"
-dest_files=["res://.godot/imported/botao_como_jogar_hover.png-76413ac9444e6b0c3f16ce7476ae2938.ctex"]
+source_file="res://Art/Buttons/PlayAgain/botao_jogar_denovo_hover.png"
+dest_files=["res://.godot/imported/botao_jogar_denovo_hover.png-77fe6abd109a85c2d5c2cb3baf8a5ea2.ctex"]
 
 [params]
 

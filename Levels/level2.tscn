@@ -25,10 +25,12 @@ position = Vector2(494, 324)
 
 [node name="Drawing" parent="." instance=ExtResource("5_58c32")]
 
-[node name="LevelLine" parent="." instance=ExtResource("6_f16tk")]
-points = PackedVector2Array(448, 320, 448, 768, 896, 768, 896, 704, 832, 704, 832, 640, 768, 640, 768, 576, 704, 576, 704, 512, 640, 512, 640, 448, 576, 448, 576, 384, 512, 384, 512, 320, 448, 320)
-color = "purple"
-
 [node name="Timer" parent="." instance=ExtResource("3_xutns")]
 position = Vector2(1165, 84)
 timer_time = 25
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="LevelLine" parent="Lines" instance=ExtResource("6_f16tk")]
+points = PackedVector2Array(448, 320, 448, 768, 896, 768, 896, 704, 832, 704, 832, 640, 768, 640, 768, 576, 704, 576, 704, 512, 640, 512, 640, 448, 576, 448, 576, 384, 512, 384, 512, 320, 448, 320)
+color = "purple"

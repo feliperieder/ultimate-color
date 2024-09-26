@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://briynjth7f5h0"
-path="res://.godot/imported/botao_sair_normal.png-ad670fb96833abc197a8a91cb75844aa.ctex"
+path="res://.godot/imported/botao_sair_normal.png-92b255e8f4981715e77b6985a5fd7593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Buttons/botao_sair_normal.png"
-dest_files=["res://.godot/imported/botao_sair_normal.png-ad670fb96833abc197a8a91cb75844aa.ctex"]
+source_file="res://Art/Buttons/Quit/botao_sair_normal.png"
+dest_files=["res://.godot/imported/botao_sair_normal.png-92b255e8f4981715e77b6985a5fd7593.ctex"]
 
 [params]
 

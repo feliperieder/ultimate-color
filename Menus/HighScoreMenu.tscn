@@ -1,24 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4t6mwkew00h4"]
+[gd_scene load_steps=9 format=3 uid="uid://b4t6mwkew00h4"]
 
 [ext_resource type="Script" path="res://Menus/high_score_menu.gd" id="1_hrbgn"]
 [ext_resource type="FontFile" uid="uid://cvlmj01u6oxdv" path="res://Art/fonts/GrapeSoda.ttf" id="2_ggofq"]
+[ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="3_nor31"]
+[ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="4_pewdt"]
+[ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="5_pc10g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kowka"]
 font = ExtResource("2_ggofq")
 font_size = 60
+font_color = Color(1, 0.870588, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_c2onk"]
 font = ExtResource("2_ggofq")
 font_size = 30
+font_color = Color(1, 0.870588, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_xx6ro"]
 font = ExtResource("2_ggofq")
 font_size = 30
+font_color = Color(1, 0.870588, 0, 1)
 
 [node name="HighScoreMenu" type="Node2D"]
 script = ExtResource("1_hrbgn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1302.0
+offset_bottom = 977.0
+color = Color(0.133333, 0.12549, 0.203922, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -55,8 +66,11 @@ size_flags_horizontal = 8
 label_settings = SubResource("LabelSettings_xx6ro")
 horizontal_alignment = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Button" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "Back"
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_nor31")
+texture_pressed = ExtResource("4_pewdt")
+texture_focused = ExtResource("5_pc10g")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]

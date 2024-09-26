@@ -91,9 +91,7 @@ func _physics_process(delta: float) -> void:
 		if player_error == 0:
 			losePoint()
 	else:
-		if int(clock.timer.time_left) % 10 == 0 and not game_ended:
-			animation.play("default")
-			pass
+		animation.play("default")
 	
 	timerPontuation()
 

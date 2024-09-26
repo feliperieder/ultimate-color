@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4vdlykln6iia"
-path="res://.godot/imported/botao_sair_apertado.png-174a6de7c939fb19a38d252ebfb50368.ctex"
+uid="uid://d1dhs85ruf4xi"
+path="res://.godot/imported/botao_jogar_denovo_normal.png-e8c0b92611ab59f39c2a2febfad9745e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Buttons/botao_sair_apertado.png"
-dest_files=["res://.godot/imported/botao_sair_apertado.png-174a6de7c939fb19a38d252ebfb50368.ctex"]
+source_file="res://Art/Buttons/PlayAgain/botao_jogar_denovo_normal.png"
+dest_files=["res://.godot/imported/botao_jogar_denovo_normal.png-e8c0b92611ab59f39c2a2febfad9745e.ctex"]
 
 [params]
 

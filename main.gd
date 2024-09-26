@@ -1,7 +1,7 @@
 extends Node2D
 var points
 
-@onready var background = $LevelLine as Line2D
+@onready var background = $Lines as Node2D
 @onready var player = $PlayerTest as CharacterBody2D
 @onready var drawing = $Drawing as Node2D
 @onready var clock = $Timer as Node2D
@@ -24,10 +24,11 @@ func endLevel(points):
 	background.hide()
 	clock.hide()
 	player.hide()
+	animation.hide()
 	if drawing.drawing:
 		drawing.finishingLine()
 	drawing.level_finished = true
-	MenuScoreInstanciate(points)	
+	MenuScoreInstanciate(points)
 
 func MenuScoreInstanciate(points):
 	var score_menu = SCORE_MENU_PATH.instantiate()

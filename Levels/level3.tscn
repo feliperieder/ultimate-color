@@ -25,40 +25,42 @@ position = Vector2(494, 324)
 
 [node name="Drawing" parent="." instance=ExtResource("5_xqv1e")]
 
-[node name="LevelLine" parent="." instance=ExtResource("6_jw5eh")]
+[node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
+position = Vector2(1165, 84)
+timer_time = 60
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="LevelLine" parent="Lines" instance=ExtResource("6_jw5eh")]
 scale = Vector2(0.962102, 0.984122)
 points = PackedVector2Array(500, 500, 700, 300, 900, 500, 500, 500)
 
-[node name="LevelLine2" parent="." instance=ExtResource("6_jw5eh")]
+[node name="LevelLine2" parent="Lines" instance=ExtResource("6_jw5eh")]
 position = Vector2(480, 496)
 points = PackedVector2Array(0, -8, 0, 272, 384, 272, 384, -8)
 color = "pink"
 
-[node name="LevelLine3" parent="." instance=ExtResource("6_jw5eh")]
+[node name="LevelLine3" parent="Lines" instance=ExtResource("6_jw5eh")]
 position = Vector2(640, 768)
 points = PackedVector2Array(0, 0, 0, -120, 72, -120, 72, 0)
 color = "yellow"
 
-[node name="LevelLine4" parent="." instance=ExtResource("6_jw5eh")]
+[node name="LevelLine4" parent="Lines" instance=ExtResource("6_jw5eh")]
 position = Vector2(528, 552)
 points = PackedVector2Array(0, 64, 0, -8, 88, -8, 88, 64, 0, 64)
 color = "white"
 
-[node name="LevelLine5" parent="." instance=ExtResource("6_jw5eh")]
+[node name="LevelLine5" parent="Lines" instance=ExtResource("6_jw5eh")]
 position = Vector2(736, 624)
 points = PackedVector2Array(88, -8, 0, -8, 0, -80, 88, -80, 88, -8)
 color = "white"
 
-[node name="LevelLine6" parent="." instance=ExtResource("6_jw5eh")]
+[node name="LevelLine6" parent="Lines" instance=ExtResource("6_jw5eh")]
 position = Vector2(408, 808)
 points = PackedVector2Array(-16, -56, 72, -56)
 color = "green"
 
-[node name="LevelLine7" parent="." instance=ExtResource("6_jw5eh")]
+[node name="LevelLine7" parent="Lines" instance=ExtResource("6_jw5eh")]
 position = Vector2(408, 808)
 points = PackedVector2Array(456, -56, 544, -56)
 color = "green"
-
-[node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
-position = Vector2(1165, 84)
-timer_time = 60

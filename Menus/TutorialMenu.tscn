@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg7ifbqiaaka"]
+[gd_scene load_steps=7 format=3 uid="uid://bg7ifbqiaaka"]
 
 [ext_resource type="Script" path="res://Menus/tutorial_menu.gd" id="1_r7d0e"]
 [ext_resource type="FontFile" uid="uid://cvlmj01u6oxdv" path="res://Art/fonts/GrapeSoda.ttf" id="2_wamdh"]
+[ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="3_8h2n1"]
+[ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="4_vc4th"]
+[ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="5_y3onx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kowka"]
 font = ExtResource("2_wamdh")
@@ -32,8 +35,11 @@ text = "COMO JOGAR"
 label_settings = SubResource("LabelSettings_kowka")
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Button" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "Back"
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_8h2n1")
+texture_pressed = ExtResource("4_vc4th")
+texture_focused = ExtResource("5_y3onx")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]

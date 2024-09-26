@@ -1,7 +1,7 @@
 extends Node2D
 
 const MENU_PATH = "res://Menus/Menu.tscn"
-@onready var back_button = $CanvasLayer/VBoxContainer/Button as Button
+@onready var back_button = $CanvasLayer/VBoxContainer/Button as TextureButton
 var scores
 @onready var tag_name = $CanvasLayer/VBoxContainer/HBoxContainer/TagName as Label
 @onready var score_label = $CanvasLayer/VBoxContainer/HBoxContainer/Score_label as Label

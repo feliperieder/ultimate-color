@@ -17,11 +17,6 @@ position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_wnwuy")
 
-[node name="LevelLine" parent="." instance=ExtResource("2_d32u7")]
-position = Vector2(270, 257)
-points = PackedVector2Array(212, 85, 569, 85, 569, 475, 213, 475, 212, 85)
-color = "yellow"
-
 [node name="PlayerTest" parent="." instance=ExtResource("2_b3ych")]
 position = Vector2(419, 306)
 
@@ -29,6 +24,13 @@ position = Vector2(419, 306)
 
 [node name="Timer" parent="." instance=ExtResource("7_v6ubg")]
 position = Vector2(1165, 84)
-timer_time = 25
+timer_time = 20
 
 [node name="UILayer" parent="." instance=ExtResource("7_8x0ow")]
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="LevelLine" parent="Lines" instance=ExtResource("2_d32u7")]
+position = Vector2(270, 257)
+points = PackedVector2Array(212, 85, 569, 85, 569, 475, 213, 475, 212, 85)
+color = "yellow"

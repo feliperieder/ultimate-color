@@ -1,28 +1,28 @@
 [gd_scene load_steps=15 format=3 uid="uid://cp1k1cavisb5e"]
 
 [ext_resource type="Script" path="res://Menus/menu.gd" id="1_nbucm"]
-[ext_resource type="Texture2D" uid="uid://bmvmqwfj3au1r" path="res://Art/Buttons/menu_esboco.png" id="2_bcw37"]
-[ext_resource type="Texture2D" uid="uid://dkfe5i6hjpypy" path="res://Art/Buttons/botao_jogar_normal.png" id="2_ujjxg"]
-[ext_resource type="Texture2D" uid="uid://bi6x41uq3oq7q" path="res://Art/Buttons/botao_jogar_apertado.png" id="3_nnn1v"]
-[ext_resource type="Texture2D" uid="uid://bfce6nixuwetb" path="res://Art/Buttons/botao_recordes_normal.png" id="4_1ruxu"]
-[ext_resource type="Texture2D" uid="uid://n15olu7vc2d3" path="res://Art/Buttons/botao_jogar_hover.png" id="4_i8ao7"]
-[ext_resource type="Texture2D" uid="uid://vptt8x81whvx" path="res://Art/Buttons/botao_recordes_apertado.png" id="5_csi6s"]
-[ext_resource type="Texture2D" uid="uid://bw5vkj48ux1of" path="res://Art/Buttons/botao_recordes_hover.png" id="6_7dw3h"]
-[ext_resource type="Texture2D" uid="uid://exo8kp6ku4xx" path="res://Art/Buttons/botao_como_jogar_normal.png" id="7_14mna"]
-[ext_resource type="Texture2D" uid="uid://b5011fbrbppw6" path="res://Art/Buttons/botao_como_jogar_apertado.png" id="8_j0ixr"]
-[ext_resource type="Texture2D" uid="uid://drmu7rxl06mqe" path="res://Art/Buttons/botao_como_jogar_hover.png" id="9_acyp5"]
-[ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/botao_sair_normal.png" id="10_370pr"]
-[ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/botao_sair_apertado.png" id="11_7pfo5"]
-[ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/botao_sair_hover.png" id="12_e5nt5"]
+[ext_resource type="Texture2D" uid="uid://cyv0rx7uxihhb" path="res://Art/BG/menu_fundo.png" id="2_ge3gi"]
+[ext_resource type="Texture2D" uid="uid://dkfe5i6hjpypy" path="res://Art/Buttons/Play/botao_jogar_normal.png" id="2_ujjxg"]
+[ext_resource type="Texture2D" uid="uid://bi6x41uq3oq7q" path="res://Art/Buttons/Play/botao_jogar_apertado.png" id="3_nnn1v"]
+[ext_resource type="Texture2D" uid="uid://bfce6nixuwetb" path="res://Art/Buttons/Scores/botao_recordes_normal.png" id="4_1ruxu"]
+[ext_resource type="Texture2D" uid="uid://n15olu7vc2d3" path="res://Art/Buttons/Play/botao_jogar_hover.png" id="4_i8ao7"]
+[ext_resource type="Texture2D" uid="uid://vptt8x81whvx" path="res://Art/Buttons/Scores/botao_recordes_apertado.png" id="5_csi6s"]
+[ext_resource type="Texture2D" uid="uid://bw5vkj48ux1of" path="res://Art/Buttons/Scores/botao_recordes_hover.png" id="6_7dw3h"]
+[ext_resource type="Texture2D" uid="uid://exo8kp6ku4xx" path="res://Art/Buttons/HowToPlay/botao_como_jogar_normal.png" id="7_14mna"]
+[ext_resource type="Texture2D" uid="uid://b5011fbrbppw6" path="res://Art/Buttons/HowToPlay/botao_como_jogar_apertado.png" id="8_j0ixr"]
+[ext_resource type="Texture2D" uid="uid://drmu7rxl06mqe" path="res://Art/Buttons/HowToPlay/botao_como_jogar_hover.png" id="9_acyp5"]
+[ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="10_370pr"]
+[ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="11_7pfo5"]
+[ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="12_e5nt5"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_nbucm")
 
-[node name="MenuEsboco" type="Sprite2D" parent="."]
+[node name="MenuFundo" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(640, 482)
+position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_bcw37")
+texture = ExtResource("2_ge3gi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8

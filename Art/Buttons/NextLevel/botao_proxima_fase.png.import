@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkfe5i6hjpypy"
-path="res://.godot/imported/botao_jogar_normal.png-f2d423bf1d6163a38337deff906e9fab.ctex"
+uid="uid://dkupyg8d30cup"
+path="res://.godot/imported/botao_proxima_fase.png-253c6595e798d0ed88e04909b212eb86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Buttons/botao_jogar_normal.png"
-dest_files=["res://.godot/imported/botao_jogar_normal.png-f2d423bf1d6163a38337deff906e9fab.ctex"]
+source_file="res://Art/Buttons/NextLevel/botao_proxima_fase.png"
+dest_files=["res://.godot/imported/botao_proxima_fase.png-253c6595e798d0ed88e04909b212eb86.ctex"]
 
 [params]
 

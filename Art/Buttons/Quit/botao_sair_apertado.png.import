@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw5vkj48ux1of"
-path="res://.godot/imported/botao_recordes_hover.png-a7892eb05437a81da232a620d7aa0f0c.ctex"
+uid="uid://b4vdlykln6iia"
+path="res://.godot/imported/botao_sair_apertado.png-7c8e6053f3157a7951ece35c723c748f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Buttons/botao_recordes_hover.png"
-dest_files=["res://.godot/imported/botao_recordes_hover.png-a7892eb05437a81da232a620d7aa0f0c.ctex"]
+source_file="res://Art/Buttons/Quit/botao_sair_apertado.png"
+dest_files=["res://.godot/imported/botao_sair_apertado.png-7c8e6053f3157a7951ece35c723c748f.ctex"]
 
 [params]
 

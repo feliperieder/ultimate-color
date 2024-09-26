@@ -1,7 +1,7 @@
 extends Node2D
 
 const MENU_PATH = "res://Menus/Menu.tscn"
-@onready var back_button = $CanvasLayer/VBoxContainer/Button as Button
+@onready var back_button = $CanvasLayer/VBoxContainer/Button as TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
