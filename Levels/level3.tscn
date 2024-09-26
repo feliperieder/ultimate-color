@@ -61,4 +61,4 @@ color = "green"
 
 [node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
 position = Vector2(1165, 84)
-timer_time = 55
+timer_time = 60

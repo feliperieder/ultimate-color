@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://dgbjir8wy4hdq"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_n3ooa"]
+[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_capvs"]
+[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_kwrbs"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="4_bat7l"]
+[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="5_m2sni"]
+[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="6_j3k7p"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="7_wayrr"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_n3ooa")
+level = 5
+time = 40
+
+[node name="UILayer" parent="." instance=ExtResource("2_capvs")]
+
+[node name="Timer" parent="." instance=ExtResource("3_kwrbs")]
+position = Vector2(1165, 84)
+timer_time = 75
+
+[node name="BgAzul" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(640, 480)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("4_bat7l")
+
+[node name="PlayerTest" parent="." instance=ExtResource("5_m2sni")]
+position = Vector2(494, 324)
+
+[node name="Drawing" parent="." instance=ExtResource("6_j3k7p")]
+
+[node name="LevelLine" parent="." instance=ExtResource("7_wayrr")]
+points = PackedVector2Array(670, 380, 792, 424, 832, 544, 792, 664, 670, 704, 552, 664, 512, 544, 552, 424, 670, 380)
+color = "purple"
