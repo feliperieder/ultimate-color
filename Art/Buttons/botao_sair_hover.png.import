@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btpf1hb65wh7q"
-path="res://.godot/imported/botao_como_jogar.png-d94f214363a90a8b2ea2c4f96ba143fa.ctex"
+uid="uid://dsqpsnqxoorp2"
+path="res://.godot/imported/botao_sair_hover.png-2e90692933a5b03ae690dc0213ae82e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Buttons/botao_como_jogar.png"
-dest_files=["res://.godot/imported/botao_como_jogar.png-d94f214363a90a8b2ea2c4f96ba143fa.ctex"]
+source_file="res://Art/Buttons/botao_sair_hover.png"
+dest_files=["res://.godot/imported/botao_sair_hover.png-2e90692933a5b03ae690dc0213ae82e8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g4jkyatg0oj1"
-path="res://.godot/imported/botao_recordes.png-d9c606540c2ca582ae165b1238c66bbe.ctex"
+uid="uid://dkfe5i6hjpypy"
+path="res://.godot/imported/botao_jogar_normal.png-f2d423bf1d6163a38337deff906e9fab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Buttons/botao_recordes.png"
-dest_files=["res://.godot/imported/botao_recordes.png-d9c606540c2ca582ae165b1238c66bbe.ctex"]
+source_file="res://Art/Buttons/botao_jogar_normal.png"
+dest_files=["res://.godot/imported/botao_jogar_normal.png-f2d423bf1d6163a38337deff906e9fab.ctex"]
 
 [params]
 
