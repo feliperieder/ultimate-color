@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://df8shho8sbgqh"]
+
+[ext_resource type="Script" path="res://Levels/main.gd" id="1_ieob5"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_23m8o"]
+[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="3_l6ttc"]
+[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="4_xir3g"]
+[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="5_23gyn"]
+[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="6_d2u4t"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="7_g3i45"]
+[ext_resource type="PackedScene" uid="uid://cp0eliku01kcr" path="res://Gameplay/late_line.tscn" id="8_amd5g"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ieob5")
+level = 10
+
+[node name="BgAzul" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(640, 480)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_23m8o")
+
+[node name="PlayerTest" parent="." instance=ExtResource("3_l6ttc")]
+position = Vector2(419, 306)
+
+[node name="Drawing" parent="." instance=ExtResource("4_xir3g")]
+
+[node name="Timer" parent="." instance=ExtResource("5_23gyn")]
+position = Vector2(1165, 84)
+timer_time = 35
+
+[node name="UILayer" parent="." instance=ExtResource("6_d2u4t")]
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="LateLine" parent="Lines" instance=ExtResource("8_amd5g")]
+position = Vector2(487, 338)
+points = PackedVector2Array(390, 401, -1, 6)
+
+[node name="LateLine2" parent="Lines" instance=ExtResource("8_amd5g")]
+position = Vector2(487, 338)
+points = PackedVector2Array(-5, 400, 392, 4)
+
+[node name="LevelLine" parent="Lines" instance=ExtResource("7_g3i45")]
+position = Vector2(270, 257)
+points = PackedVector2Array(210, 85, 610, 85, 610, 485, 210, 485, 210, 85)
+color = "yellow"

@@ -1,7 +1,7 @@
 extends Node
 
 var campaign_mode = true
-var late_levels = [4, 5, 6, 7]
+var late_levels = [4, 5, 6, 7, 8, 9, 10]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

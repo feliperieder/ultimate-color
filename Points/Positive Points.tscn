@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_if0a5"]
 radius = 1.0
 
-[node name="PositivePoints" type="Area2D" groups=["positive_point"]]
+[node name="PositivePoints" type="Area2D" groups=["positive_point", "visible_points"]]
 z_index = 5
 script = ExtResource("1_fkq57")
 color = "red"

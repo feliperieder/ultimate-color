@@ -18,7 +18,7 @@ const COLOR_LIGHT_YELLOW = Color.LIGHT_GOLDENROD
 var initial_colors = ["red", "blue", "yellow", "white"]
 var colors = ["red", "yellow", "blue", "white", "purple", "pink", "green"]
 
-@export var time_to_appear = 20
+var initial_visible_points
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +34,12 @@ func _ready() -> void:
 	var player = get_tree().get_first_node_in_group("brush")
 	player.current_bullets = bullets
 	player.bullet_point = player.MAX_POINTS / bullets
+	print(initial_visible_points)
+	self.hide()
+	
+func _process(delta: float) -> void:
+	if get_tree().get_node_count_in_group("visible_points") <= 200:
+		self.show()
 	
 
 # Função para preencher a linha com objetos
@@ -56,6 +62,7 @@ func instanciatePoints(position):
 			var instance = POSITIVE_POINTS_PATH.instantiate()
 			instance.color = color
 			instance.position = position
+			instance.remove_from_group("visible_points")
 			add_child(instance)  # Adiciona o objeto à cena
 			
 func instanciateDrawZone(position):
