@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://brxhqe0c861t"]
+[gd_scene load_steps=9 format=3 uid="uid://brxhqe0c861t"]
 
 [ext_resource type="Script" path="res://Levels/main.gd" id="1_8b5wb"]
 [ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_c0klb"]
@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="5_xn1cu"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="6_yih2x"]
 [ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="7_dwgny"]
+[ext_resource type="PackedScene" uid="uid://defuhwfbattrr" path="res://Gameplay/DisturbVision.tscn" id="8_uigcs"]
 
-[node name="Main" type="Node2D"]
+[node name="Main2" type="Node2D"]
 script = ExtResource("1_8b5wb")
-level = 6
-time = 40
+level = 9
 
 [node name="UILayer" parent="." instance=ExtResource("2_c0klb")]
 
@@ -60,3 +60,8 @@ color = "green"
 [node name="LevelLine" parent="Lines" instance=ExtResource("7_dwgny")]
 position = Vector2(24, 110)
 points = PackedVector2Array(550, 300, 750, 300, 850, 400, 450, 400, 550, 300)
+
+[node name="DisturbVision" parent="." instance=ExtResource("8_uigcs")]
+position = Vector2(672, 536)
+disturb_time = 70
+duration = 10

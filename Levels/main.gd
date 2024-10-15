@@ -8,7 +8,6 @@ var points
 @onready var animation = $UILayer/CanvasLayer/animation as AnimatedSprite2D
 
 @export var level = 1
-@export var time = 20
 
 const SCORE_MENU_PATH = preload("res://Menus/ScoreMenu.tscn")
 
