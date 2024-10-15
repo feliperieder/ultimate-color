@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://cireoldsqgjt1"]
+
+[ext_resource type="LabelSettings" uid="uid://c24subxv282ut" path="res://Art/fonts/ClassicalFont.tres" id="1_vgdye"]
+[ext_resource type="PackedScene" uid="uid://cw1f4d7yonlmb" path="res://Buttons/LevelButton.tscn" id="2_x1mks"]
+[ext_resource type="PackedScene" uid="uid://ce6wcwleml7su" path="res://Buttons/BackToMenuButton.tscn" id="3_o1m01"]
+
+[node name="Level Selection" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1302.0
+offset_bottom = 977.0
+color = Color(0.133333, 0.12549, 0.203922, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.5
+offset_top = -60.0
+offset_right = 230.5
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Seleção de Nível "
+label_settings = ExtResource("1_vgdye")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LevelButton" parent="CanvasLayer/VBoxContainer/HBoxContainer" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="CanvasLayer/VBoxContainer/HBoxContainer" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 2
+
+[node name="LevelButton4" parent="CanvasLayer/VBoxContainer/HBoxContainer" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 3
+
+[node name="LevelButton3" parent="CanvasLayer/VBoxContainer/HBoxContainer" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 4
+
+[node name="LevelButton5" parent="CanvasLayer/VBoxContainer/HBoxContainer" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LevelButton" parent="CanvasLayer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 6
+
+[node name="LevelButton2" parent="CanvasLayer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 7
+
+[node name="LevelButton4" parent="CanvasLayer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 8
+
+[node name="LevelButton3" parent="CanvasLayer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 9
+
+[node name="LevelButton5" parent="CanvasLayer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 10
+
+[node name="QuitButton" parent="CanvasLayer/VBoxContainer" instance=ExtResource("3_o1m01")]
+layout_mode = 2

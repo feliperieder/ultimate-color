@@ -29,4 +29,4 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_ogewn")
 
 [node name="animation" parent="CanvasLayer" instance=ExtResource("1_5mfve")]
-position = Vector2(596, 100)
+position = Vector2(187, 104)

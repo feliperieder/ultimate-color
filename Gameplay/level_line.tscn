@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5et3exwbxfh8"]
+
+[ext_resource type="Script" path="res://Gameplay/level_line.gd" id="1_qbtb4"]
+
+[node name="LevelLine" type="Line2D" groups=["line"]]
+script = ExtResource("1_qbtb4")

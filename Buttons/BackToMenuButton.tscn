@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce6wcwleml7su"]
+
+[ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="1_ridps"]
+[ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="2_qmnk8"]
+[ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="3_wyo0s"]
+[ext_resource type="Script" path="res://Buttons/back_to_menu_button.gd" id="4_2nid1"]
+
+[node name="QuitButton" type="TextureButton"]
+offset_left = -46.0
+offset_top = -31.0
+offset_right = 45.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_ridps")
+texture_pressed = ExtResource("2_qmnk8")
+texture_focused = ExtResource("3_wyo0s")
+script = ExtResource("4_2nid1")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

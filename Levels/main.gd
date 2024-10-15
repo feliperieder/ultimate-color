@@ -7,15 +7,14 @@ var points
 @onready var clock = $Timer as Node2D
 @onready var animation = $UILayer/CanvasLayer/animation as AnimatedSprite2D
 
-@export var level = 0
+@export var level = 1
 @export var time = 20
 
-const SCORE_MENU_PATH = preload("res://Menus/Score Menu.tscn")
+const SCORE_MENU_PATH = preload("res://Menus/ScoreMenu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

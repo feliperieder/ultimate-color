@@ -1,21 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgbjir8wy4hdq"]
+[gd_scene load_steps=8 format=3 uid="uid://ccyramk0ry66i"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_n3ooa"]
-[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_capvs"]
-[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_kwrbs"]
-[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="4_bat7l"]
-[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="5_m2sni"]
-[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="6_j3k7p"]
-[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="7_wayrr"]
+[ext_resource type="Script" path="res://Levels/main.gd" id="1_4osl0"]
+[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_2eyqy"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="3_ryydt"]
+[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_ina6m"]
+[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_g6mav"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="6_j2mg7"]
+[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="7_v5cpu"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_n3ooa")
-level = 5
-time = 25
+script = ExtResource("1_4osl0")
+level = 6
+time = 40
 
-[node name="UILayer" parent="." instance=ExtResource("2_capvs")]
+[node name="UILayer" parent="." instance=ExtResource("2_2eyqy")]
 
-[node name="Timer" parent="." instance=ExtResource("3_kwrbs")]
+[node name="Timer" parent="." instance=ExtResource("7_v5cpu")]
 position = Vector2(1165, 84)
 timer_time = 75
 
@@ -23,15 +23,40 @@ timer_time = 75
 texture_filter = 1
 position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("4_bat7l")
+texture = ExtResource("3_ryydt")
 
-[node name="PlayerTest" parent="." instance=ExtResource("5_m2sni")]
+[node name="PlayerTest" parent="." instance=ExtResource("4_ina6m")]
 position = Vector2(494, 324)
 
-[node name="Drawing" parent="." instance=ExtResource("6_j3k7p")]
+[node name="Drawing" parent="." instance=ExtResource("5_g6mav")]
 
 [node name="Lines" type="Node2D" parent="."]
 
-[node name="LevelLine" parent="Lines" instance=ExtResource("7_wayrr")]
-points = PackedVector2Array(670, 380, 792, 424, 832, 544, 792, 664, 670, 704, 552, 664, 512, 544, 552, 424, 670, 380)
-color = "purple"
+[node name="LevelLine3" parent="Lines" instance=ExtResource("6_j2mg7")]
+position = Vector2(24, 110)
+points = PackedVector2Array(618, 574, 650, 598, 682, 574)
+color = "white"
+
+[node name="LevelLine2" parent="Lines" instance=ExtResource("6_j2mg7")]
+position = Vector2(24, 110)
+points = PackedVector2Array(450, 400, 620, 570, 680, 570, 850, 400)
+color = "pink"
+
+[node name="LevelLine4" parent="Lines" instance=ExtResource("6_j2mg7")]
+position = Vector2(24, 110)
+points = PackedVector2Array(635, 566, 550, 398, 610, 302)
+color = "blue"
+
+[node name="LevelLine5" parent="Lines" instance=ExtResource("6_j2mg7")]
+position = Vector2(24, 110)
+points = PackedVector2Array(665, 566, 750, 398, 700, 302)
+color = "yellow"
+
+[node name="LevelLine6" parent="Lines" instance=ExtResource("6_j2mg7")]
+position = Vector2(26, 108)
+points = PackedVector2Array(650, 574, 650, 302)
+color = "green"
+
+[node name="LevelLine" parent="Lines" instance=ExtResource("6_j2mg7")]
+position = Vector2(24, 110)
+points = PackedVector2Array(550, 300, 750, 300, 850, 400, 450, 400, 550, 300)

@@ -15,10 +15,18 @@ const COLOR_PINK = Color.MISTY_ROSE
 const COLOR_GREEN = Color.LIGHT_GREEN
 const COLOR_LIGHT_YELLOW = Color.LIGHT_GOLDENROD
 
+var initial_colors = ["red", "blue", "yellow", "white"]
+var colors = ["red", "yellow", "blue", "white", "purple", "pink", "green"]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if get_tree().current_scene.level <= 2:
+		var random_color = randi_range(0, initial_colors.size()-1)
+		color = initial_colors[random_color]
+	else:
+		var random_color = randi_range(0, colors.size()-1)
+		color = colors[random_color]
 	setColor()
-	print()
 	fill_line_with_objects()
 	var bullets = get_tree().get_node_count_in_group("positive_point")
 	var player = get_tree().get_first_node_in_group("brush")

@@ -1,8 +1,9 @@
 extends Node2D
 
-const FIRST_LEVEL_PATH = "res://main.tscn"
+const FIRST_LEVEL_PATH = "res://Levels/level3.tscn"
 const CREDITS_PATH = "res://Menus/HighScoreMenu.tscn"
 const TUTORIAL_PATH = "res://Menus/TutorialMenu.tscn"
+const SELECTION_LEVEL_PATH = "res://Menus/level_selection.tscn"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,12 +18,10 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	Global.campaign_mode = true
+	Global.resetLevels()
 	Music.playLevelMusic()
 	get_tree().change_scene_to_file(FIRST_LEVEL_PATH)
-
-
-func _on_score_pressed() -> void:
-	get_tree().change_scene_to_file(CREDITS_PATH)
 
 
 func _on_quit_pressed() -> void:
@@ -31,3 +30,7 @@ func _on_quit_pressed() -> void:
 
 func _on_how_to_play_pressed() -> void:
 	get_tree().change_scene_to_file(TUTORIAL_PATH)
+
+
+func _on_level_select_pressed() -> void:
+	get_tree().change_scene_to_file(SELECTION_LEVEL_PATH)

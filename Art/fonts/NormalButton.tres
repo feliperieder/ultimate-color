@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c88g81mwrpe0o"]
+
+[ext_resource type="FontFile" uid="uid://cvlmj01u6oxdv" path="res://Art/fonts/GrapeSoda.ttf" id="1_0wryi"]
+
+[resource]
+font = ExtResource("1_0wryi")
+font_size = 60
+font_color = Color(0, 0, 1, 1)
+outline_size = 5
+outline_color = Color(1, 0, 0, 1)

@@ -1,52 +1,66 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccb88my815yj8"]
+[gd_scene load_steps=8 format=3 uid="uid://c2x58nk0qbvk6"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_bwc0u"]
-[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_nrheq"]
-[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_t78oi"]
-[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_s6fvl"]
-[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_dqqbi"]
-[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_gxire"]
-[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="7_guf6i"]
+[ext_resource type="Script" path="res://Levels/main.gd" id="1_cxed1"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_2ku6a"]
+[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="3_qvyfm"]
+[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_ym8bh"]
+[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_0cjo1"]
+[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_xqv1e"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="6_jw5eh"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_bwc0u")
+script = ExtResource("1_cxed1")
 level = 4
-
-[node name="UILayer" parent="." instance=ExtResource("2_nrheq")]
 
 [node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_t78oi")
+texture = ExtResource("2_2ku6a")
 
-[node name="PlayerTest" parent="." instance=ExtResource("4_dqqbi")]
+[node name="UILayer" parent="." instance=ExtResource("3_qvyfm")]
+
+[node name="PlayerTest" parent="." instance=ExtResource("4_0cjo1")]
 position = Vector2(494, 324)
 
-[node name="Drawing" parent="." instance=ExtResource("5_gxire")]
+[node name="Drawing" parent="." instance=ExtResource("5_xqv1e")]
 
-[node name="Timer" parent="." instance=ExtResource("3_s6fvl")]
+[node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
 position = Vector2(1165, 84)
-timer_time = 25
+timer_time = 60
 
 [node name="Lines" type="Node2D" parent="."]
 
-[node name="LevelLine" parent="Lines" instance=ExtResource("7_guf6i")]
-position = Vector2(4, 70)
-points = PackedVector2Array(650, 300, 550, 500)
-color = "blue"
+[node name="LevelLine" parent="Lines" instance=ExtResource("6_jw5eh")]
+scale = Vector2(0.962102, 0.984122)
+points = PackedVector2Array(500, 500, 700, 300, 900, 500, 500, 500)
 
-[node name="LevelLine2" parent="Lines" instance=ExtResource("7_guf6i")]
-position = Vector2(4, 70)
-points = PackedVector2Array(650, 300, 750, 500)
+[node name="LevelLine2" parent="Lines" instance=ExtResource("6_jw5eh")]
+position = Vector2(480, 496)
+points = PackedVector2Array(0, -8, 0, 272, 384, 272, 384, -8)
+color = "pink"
+
+[node name="LevelLine3" parent="Lines" instance=ExtResource("6_jw5eh")]
+position = Vector2(640, 768)
+points = PackedVector2Array(0, 0, 0, -120, 72, -120, 72, 0)
 color = "yellow"
 
-[node name="LevelLine4" parent="Lines" instance=ExtResource("7_guf6i")]
-position = Vector2(4, 70)
-points = PackedVector2Array(550, 500, 650, 700)
-color = "purple"
+[node name="LevelLine4" parent="Lines" instance=ExtResource("6_jw5eh")]
+position = Vector2(528, 552)
+points = PackedVector2Array(0, 64, 0, -8, 88, -8, 88, 64, 0, 64)
+color = "white"
 
-[node name="LevelLine3" parent="Lines" instance=ExtResource("7_guf6i")]
-position = Vector2(4, 70)
-points = PackedVector2Array(750, 500, 650, 700)
+[node name="LevelLine5" parent="Lines" instance=ExtResource("6_jw5eh")]
+position = Vector2(736, 624)
+points = PackedVector2Array(88, -8, 0, -8, 0, -80, 88, -80, 88, -8)
+color = "white"
+
+[node name="LevelLine6" parent="Lines" instance=ExtResource("6_jw5eh")]
+position = Vector2(408, 808)
+points = PackedVector2Array(-16, -56, 72, -56)
+color = "green"
+
+[node name="LevelLine7" parent="Lines" instance=ExtResource("6_jw5eh")]
+position = Vector2(408, 808)
+points = PackedVector2Array(456, -56, 544, -56)
 color = "green"

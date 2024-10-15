@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw1f4d7yonlmb"]
+
+[ext_resource type="Texture2D" uid="uid://bi6x41uq3oq7q" path="res://Art/Buttons/Play/botao_jogar_apertado.png" id="1_wkb7k"]
+[ext_resource type="Texture2D" uid="uid://dkfe5i6hjpypy" path="res://Art/Buttons/Play/botao_jogar_normal.png" id="1_xnjvw"]
+[ext_resource type="Script" path="res://Buttons/level_button.gd" id="2_kjtww"]
+[ext_resource type="Texture2D" uid="uid://n15olu7vc2d3" path="res://Art/Buttons/Play/botao_jogar_hover.png" id="3_umgyw"]
+[ext_resource type="LabelSettings" uid="uid://c88g81mwrpe0o" path="res://Art/fonts/NormalButton.tres" id="5_0cgfj"]
+
+[node name="LevelButton" type="TextureButton"]
+texture_filter = 1
+offset_left = -48.0
+offset_top = -32.0
+offset_right = 48.0
+offset_bottom = 26.0
+texture_normal = ExtResource("1_xnjvw")
+texture_pressed = ExtResource("1_wkb7k")
+texture_focused = ExtResource("3_umgyw")
+script = ExtResource("2_kjtww")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -29.0
+offset_right = 24.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+label_settings = ExtResource("5_0cgfj")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

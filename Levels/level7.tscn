@@ -1,21 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjrvghkk83nc"]
+[gd_scene load_steps=8 format=3 uid="uid://dgbjir8wy4hdq"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_pam5a"]
-[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_yfynr"]
-[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_w5je8"]
-[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="4_8m40q"]
-[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="5_ufwh0"]
-[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="6_ck56v"]
-[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="7_ds7ng"]
+[ext_resource type="Script" path="res://Levels/main.gd" id="1_ffnbt"]
+[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_j125l"]
+[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_uny1a"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="4_yqqrs"]
+[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="5_krer6"]
+[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="6_6do48"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="7_xt1wk"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_pam5a")
-level = 5
-time = 40
+script = ExtResource("1_ffnbt")
+level = 7
+time = 25
 
-[node name="UILayer" parent="." instance=ExtResource("2_yfynr")]
+[node name="UILayer" parent="." instance=ExtResource("2_j125l")]
 
-[node name="Timer" parent="." instance=ExtResource("3_w5je8")]
+[node name="Timer" parent="." instance=ExtResource("3_uny1a")]
 position = Vector2(1165, 84)
 timer_time = 75
 
@@ -23,54 +23,15 @@ timer_time = 75
 texture_filter = 1
 position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("4_8m40q")
+texture = ExtResource("4_yqqrs")
 
-[node name="PlayerTest" parent="." instance=ExtResource("5_ufwh0")]
+[node name="PlayerTest" parent="." instance=ExtResource("5_krer6")]
 position = Vector2(494, 324)
 
-[node name="Drawing" parent="." instance=ExtResource("6_ck56v")]
+[node name="Drawing" parent="." instance=ExtResource("6_6do48")]
 
 [node name="Lines" type="Node2D" parent="."]
 
-[node name="LevelLine" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(672, 384, 736, 392, 752, 432, 736, 480, 672, 496, 608, 480, 592, 432, 616, 392, 672, 384)
-color = "white"
-
-[node name="LevelLine2" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(632, 416, 656, 416)
-color = "green"
-
-[node name="LevelLine3" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(688, 416, 712, 416)
-color = "green"
-
-[node name="LevelLine5" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(616, 392, 616, 352, 648, 384)
-color = "white"
-
-[node name="LevelLine6" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(704, 384, 736, 352, 736, 392)
-color = "white"
-
-[node name="LevelLine4" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(640, 496, 672, 504, 704, 496)
+[node name="LevelLine" parent="Lines" instance=ExtResource("7_xt1wk")]
+points = PackedVector2Array(670, 380, 792, 424, 832, 544, 792, 664, 670, 704, 552, 664, 512, 544, 552, 424, 670, 380)
 color = "purple"
-
-[node name="LevelLine8" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(672, 448, 672, 464, 656, 464, 688, 464)
-
-[node name="LevelLine7" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(664, 448, 680, 448)
-color = "pink"
-
-[node name="LevelLine9" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(640, 504, 600, 528, 584, 624, 544, 672, 552, 720, 792, 720, 800, 672, 760, 624, 744, 528, 704, 504)
-color = "white"
-
-[node name="LevelLine10" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(616, 712, 608, 656)
-color = "yellow"
-
-[node name="LevelLine11" parent="Lines" instance=ExtResource("7_ds7ng")]
-points = PackedVector2Array(728, 712, 736, 656)
-color = "yellow"

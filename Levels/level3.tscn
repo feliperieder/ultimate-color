@@ -1,66 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2x58nk0qbvk6"]
+[gd_scene load_steps=8 format=3 uid="uid://dvj0yn3lhw66s"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_cxed1"]
-[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_2ku6a"]
-[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="3_qvyfm"]
-[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_ym8bh"]
-[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_0cjo1"]
-[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_xqv1e"]
-[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://level_line.tscn" id="6_jw5eh"]
+[ext_resource type="Script" path="res://Levels/main.gd" id="1_efqji"]
+[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_kbo31"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="3_jinrm"]
+[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_07kim"]
+[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_l58hl"]
+[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="6_edjvj"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="7_l5k4h"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_cxed1")
+script = ExtResource("1_efqji")
 level = 3
+
+[node name="UILayer" parent="." instance=ExtResource("2_kbo31")]
 
 [node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(640, 480)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_2ku6a")
+texture = ExtResource("3_jinrm")
 
-[node name="UILayer" parent="." instance=ExtResource("3_qvyfm")]
-
-[node name="PlayerTest" parent="." instance=ExtResource("4_0cjo1")]
+[node name="PlayerTest" parent="." instance=ExtResource("4_07kim")]
 position = Vector2(494, 324)
 
-[node name="Drawing" parent="." instance=ExtResource("5_xqv1e")]
+[node name="Drawing" parent="." instance=ExtResource("5_l58hl")]
 
-[node name="Timer" parent="." instance=ExtResource("3_ym8bh")]
+[node name="Timer" parent="." instance=ExtResource("6_edjvj")]
 position = Vector2(1165, 84)
-timer_time = 60
+timer_time = 30
 
 [node name="Lines" type="Node2D" parent="."]
 
-[node name="LevelLine" parent="Lines" instance=ExtResource("6_jw5eh")]
-scale = Vector2(0.962102, 0.984122)
-points = PackedVector2Array(500, 500, 700, 300, 900, 500, 500, 500)
-
-[node name="LevelLine2" parent="Lines" instance=ExtResource("6_jw5eh")]
-position = Vector2(480, 496)
-points = PackedVector2Array(0, -8, 0, 272, 384, 272, 384, -8)
-color = "pink"
-
-[node name="LevelLine3" parent="Lines" instance=ExtResource("6_jw5eh")]
-position = Vector2(640, 768)
-points = PackedVector2Array(0, 0, 0, -120, 72, -120, 72, 0)
-color = "yellow"
-
-[node name="LevelLine4" parent="Lines" instance=ExtResource("6_jw5eh")]
-position = Vector2(528, 552)
-points = PackedVector2Array(0, 64, 0, -8, 88, -8, 88, 64, 0, 64)
-color = "white"
-
-[node name="LevelLine5" parent="Lines" instance=ExtResource("6_jw5eh")]
-position = Vector2(736, 624)
-points = PackedVector2Array(88, -8, 0, -8, 0, -80, 88, -80, 88, -8)
-color = "white"
-
-[node name="LevelLine6" parent="Lines" instance=ExtResource("6_jw5eh")]
-position = Vector2(408, 808)
-points = PackedVector2Array(-16, -56, 72, -56)
-color = "green"
-
-[node name="LevelLine7" parent="Lines" instance=ExtResource("6_jw5eh")]
-position = Vector2(408, 808)
-points = PackedVector2Array(456, -56, 544, -56)
-color = "green"
+[node name="LevelLine" parent="Lines" instance=ExtResource("7_l5k4h")]
+points = PackedVector2Array(448, 320, 448, 768, 896, 768, 896, 704, 832, 704, 832, 640, 768, 640, 768, 576, 704, 576, 704, 512, 640, 512, 640, 448, 576, 448, 576, 384, 512, 384, 512, 320, 448, 320)
+color = "purple"
