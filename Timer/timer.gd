@@ -13,6 +13,7 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer.wait_time = timer_time
+	timer_label.label_settings.font_color = Color(1, 0.871, 0)
 	timer.start()
 	player = get_tree().get_first_node_in_group("brush")
 

@@ -5,11 +5,14 @@ const POSITIVE_POINTS_PATH = preload("res://Points/Positive Points.tscn")
 const DRAW_ZONE_PATH = preload("res://Points/DrawZone.tscn")
 const SPACING = 1  # Espaçamento entre os objetos
 
+@export var time_increase = 5
+var time_increased = false
+
 @export_enum("red", "yellow", "blue", "white", "purple", "pink", "light_yellow", "green") var color = "red"
 const COLOR_RED = Color.INDIAN_RED
 const COLOR_YELLOW = Color.KHAKI
 const COLOR_BLUE = Color.SKY_BLUE
-const COLOR_WHITE = Color(0.729, 0.792, 0.914)
+const COLOR_WHITE = Color.MINT_CREAM
 const COLOR_PURPLE = Color.MEDIUM_PURPLE
 const COLOR_PINK = Color.MISTY_ROSE
 const COLOR_GREEN = Color.LIGHT_GREEN
@@ -25,6 +28,8 @@ func _ready() -> void:
 	if get_tree().current_scene.level <= 2:
 		var random_color = randi_range(0, initial_colors.size()-1)
 		color = initial_colors[random_color]
+		if not time_increased:
+			increaseTime() 
 	else:
 		var random_color = randi_range(0, colors.size()-1)
 		color = colors[random_color]
@@ -34,7 +39,6 @@ func _ready() -> void:
 	var player = get_tree().get_first_node_in_group("brush")
 	player.current_bullets = bullets
 	player.bullet_point = player.MAX_POINTS / bullets
-	print(initial_visible_points)
 	self.hide()
 	
 func _process(delta: float) -> void:
@@ -81,4 +85,9 @@ func setColor():
 		"pink": default_color = COLOR_PINK
 		"light_yellow": default_color = COLOR_LIGHT_YELLOW
 		"green": default_color = COLOR_GREEN
-		
+
+func increaseTime():
+	var clock = get_tree().get_first_node_in_group("timer")
+	print(clock.time.wait_time)
+	time_increased = true
+	

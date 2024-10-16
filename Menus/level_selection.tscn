@@ -72,26 +72,6 @@ level = 7
 layout_mode = 2
 level = 8
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="LevelButton7" parent="CanvasLayer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_x1mks")]
-layout_mode = 2
-level = 13
-
-[node name="LevelButton6" parent="CanvasLayer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_x1mks")]
-layout_mode = 2
-level = 14
-
-[node name="LevelButton4" parent="CanvasLayer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_x1mks")]
-layout_mode = 2
-level = 15
-
-[node name="LevelButton3" parent="CanvasLayer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_x1mks")]
-layout_mode = 2
-level = 16
-
 [node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -111,6 +91,26 @@ level = 11
 [node name="LevelButton3" parent="CanvasLayer/VBoxContainer/HBoxContainer4" instance=ExtResource("2_x1mks")]
 layout_mode = 2
 level = 12
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LevelButton7" parent="CanvasLayer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 13
+
+[node name="LevelButton6" parent="CanvasLayer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 14
+
+[node name="LevelButton4" parent="CanvasLayer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 15
+
+[node name="LevelButton3" parent="CanvasLayer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_x1mks")]
+layout_mode = 2
+level = 16
 
 [node name="QuitButton" parent="CanvasLayer/VBoxContainer" instance=ExtResource("3_o1m01")]
 layout_mode = 2
