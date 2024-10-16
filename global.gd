@@ -1,7 +1,8 @@
 extends Node
 
 var campaign_mode = true
-var late_levels = [4, 5, 6, 7, 8, 9, 10]
+var mid_levels = [4, 5, 6, 7, 8]
+var late_levels = [9, 10, 11, 12, 13, 14 ,15, 16]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,14 +14,19 @@ func _process(delta: float) -> void:
 	pass
 	
 func  resetLevels():
-	late_levels = [4, 5, 6, 7]
+	mid_levels = [4, 5, 6, 7, 8]
+	late_levels = [9, 10, 11, 12, 13, 14 ,15, 16]
 
 func selectLateLvl():
-	var n = randf_range(0, late_levels.size() - 1)
-	var next_lvl = late_levels[n]
-	late_levels.remove_at(n)
-	print(late_levels)
-	print(next_lvl)
-	return next_lvl
+	if not mid_levels.is_empty():
+		var n = randf_range(0, mid_levels.size() - 1)
+		var next_lvl = mid_levels[n]
+		mid_levels.remove_at(n)
+		return next_lvl
+	else:
+		var n = randf_range(0, late_levels.size() - 1)
+		var next_lvl = late_levels[n]
+		late_levels.remove_at(n)
+		return next_lvl
 	
 	

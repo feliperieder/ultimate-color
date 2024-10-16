@@ -11,13 +11,11 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_pam5a")
 level = 8
-time = 40
 
 [node name="UILayer" parent="." instance=ExtResource("2_yfynr")]
 
 [node name="Timer" parent="." instance=ExtResource("3_w5je8")]
 position = Vector2(1165, 84)
-timer_time = 75
 
 [node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1

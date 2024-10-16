@@ -3,6 +3,7 @@ extends Node2D
 @onready var timer = $Timer as Timer
 @onready var timer_label = $Label as Label
 @export var timer_time = 90
+@onready var animation = $AnimationPlayer as AnimationPlayer
 
 #Variáveis de tempo
 var minut
@@ -23,6 +24,9 @@ func _process(delta: float) -> void:
 	if sec <= 9:
 		sec = str("0",sec)
 	timer_label.text = str(minut,":",sec)
+	
+	if timer.time_left < 6:
+		animation.play('time_ending')
 
 
 func _on_timer_timeout() -> void:

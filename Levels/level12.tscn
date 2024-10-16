@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://d12d162tjeqkt"]
+
+[ext_resource type="Script" path="res://Levels/main.gd" id="1_b5prj"]
+[ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="2_roq2j"]
+[ext_resource type="PackedScene" uid="uid://dc6x4phax06m5" path="res://Timer/Timer.tscn" id="3_waxgc"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="4_d0n6l"]
+[ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="5_22k11"]
+[ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="6_aybm3"]
+[ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="7_2tojk"]
+[ext_resource type="PackedScene" uid="uid://defuhwfbattrr" path="res://Gameplay/DisturbVision.tscn" id="8_ypdde"]
+
+[node name="Main2" type="Node2D"]
+script = ExtResource("1_b5prj")
+level = 9
+
+[node name="UILayer" parent="." instance=ExtResource("2_roq2j")]
+
+[node name="Timer" parent="." instance=ExtResource("3_waxgc")]
+position = Vector2(1165, 84)
+timer_time = 75
+
+[node name="BgAzul" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(640, 480)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("4_d0n6l")
+
+[node name="PlayerTest" parent="." instance=ExtResource("5_22k11")]
+position = Vector2(494, 324)
+
+[node name="Drawing" parent="." instance=ExtResource("6_aybm3")]
+
+[node name="Lines" type="Node2D" parent="."]
+
+[node name="LevelLine2" parent="Lines" instance=ExtResource("7_2tojk")]
+position = Vector2(-1, 0)
+points = PackedVector2Array(677, 583, 657, 615)
+
+[node name="LevelLine" parent="Lines" instance=ExtResource("7_2tojk")]
+position = Vector2(-1, 0)
+points = PackedVector2Array(496, 732, 881, 732, 902, 705, 878, 659, 838, 630, 761, 604, 627, 568, 610, 586, 582, 596, 531, 597, 505, 567, 489, 595, 495, 732)
+
+[node name="LevelLine4" parent="Lines" instance=ExtResource("7_2tojk")]
+points = PackedVector2Array(775, 611, 741, 661)
+
+[node name="LevelLine5" parent="Lines" instance=ExtResource("7_2tojk")]
+position = Vector2(7, 2)
+points = PackedVector2Array(735, 594, 707, 641)
+
+[node name="LevelLine3" parent="Lines" instance=ExtResource("7_2tojk")]
+points = PackedVector2Array(711, 592, 687, 630)
+
+[node name="LevelLine6" parent="Lines" instance=ExtResource("7_2tojk")]
+points = PackedVector2Array(497, 716, 888, 717)
+
+[node name="DisturbVision" parent="." instance=ExtResource("8_ypdde")]
+position = Vector2(678, 598)
+disturb_time = 40
+duration = 15

@@ -1,6 +1,6 @@
 extends Node2D
 
-const FIRST_LEVEL_PATH = "res://Levels/level3.tscn"
+const FIRST_LEVEL_PATH = "res://Levels/level1.tscn"
 const CREDITS_PATH = "res://Menus/HighScoreMenu.tscn"
 const TUTORIAL_PATH = "res://Menus/TutorialMenu.tscn"
 const SELECTION_LEVEL_PATH = "res://Menus/level_selection.tscn"
