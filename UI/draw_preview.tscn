@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo3scp4j5goxf"]
+
+[ext_resource type="Script" path="res://UI/draw_preview.gd" id="1_p7rac"]
+[ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_fpsj7"]
+
+[node name="DrawPreview" type="Node2D"]
+script = ExtResource("1_p7rac")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 96)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_fpsj7")
+
+[node name="Line2D" type="Line2D" parent="."]

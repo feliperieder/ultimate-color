@@ -31,6 +31,5 @@ timer_time = 20
 [node name="Lines" type="Node2D" parent="."]
 
 [node name="LevelLine" parent="Lines" instance=ExtResource("3_wldcm")]
-position = Vector2(270, 257)
-points = PackedVector2Array(212, 85, 569, 85, 569, 475, 213, 475, 212, 85)
+points = PackedVector2Array(472, 352, 872, 352, 872, 744, 472, 744, 472, 352)
 color = "yellow"

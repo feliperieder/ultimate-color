@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://i6nu1j1564eq"]
+[gd_scene load_steps=5 format=3 uid="uid://i6nu1j1564eq"]
 
 [ext_resource type="PackedScene" uid="uid://gc3bvop65cqu" path="res://UI/animation.tscn" id="1_5mfve"]
 [ext_resource type="Texture2D" uid="uid://dvikwr4hud2ki" path="res://Art/Images/mancha_va.png" id="1_p3fp8"]
 [ext_resource type="Texture2D" uid="uid://lhug6yd5moqt" path="res://Art/Images/mancha_ab.png" id="2_ogewn"]
+[ext_resource type="PackedScene" uid="uid://bo3scp4j5goxf" path="res://UI/draw_preview.tscn" id="4_r6cp0"]
 
 [node name="UILayer" type="Control"]
 layout_mode = 3
@@ -29,4 +30,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_ogewn")
 
 [node name="animation" parent="CanvasLayer" instance=ExtResource("1_5mfve")]
-position = Vector2(187, 104)
+position = Vector2(640, 96)
+
+[node name="DrawPreview" parent="CanvasLayer" instance=ExtResource("4_r6cp0")]

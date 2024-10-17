@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://Gameplay/late_line.gd" id="1_usank"]
 
-[node name="LateLine" type="Line2D"]
+[node name="LateLine" type="Line2D" groups=["late_line", "line"]]
 script = ExtResource("1_usank")

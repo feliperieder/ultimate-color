@@ -33,14 +33,11 @@ timer_time = 35
 [node name="Lines" type="Node2D" parent="."]
 
 [node name="LateLine" parent="Lines" instance=ExtResource("8_amd5g")]
-position = Vector2(487, 338)
-points = PackedVector2Array(390, 401, -1, 6)
+points = PackedVector2Array(877, 739, 486, 344)
 
 [node name="LateLine2" parent="Lines" instance=ExtResource("8_amd5g")]
-position = Vector2(487, 338)
-points = PackedVector2Array(-5, 400, 392, 4)
+points = PackedVector2Array(482, 738, 879, 342)
 
 [node name="LevelLine" parent="Lines" instance=ExtResource("7_g3i45")]
-position = Vector2(270, 257)
-points = PackedVector2Array(210, 85, 610, 85, 610, 485, 210, 485, 210, 85)
+points = PackedVector2Array(480, 342, 880, 342, 880, 742, 480, 742, 480, 342)
 color = "yellow"

@@ -32,21 +32,17 @@ timer_time = 25
 [node name="Lines" type="Node2D" parent="."]
 
 [node name="LevelLine" parent="Lines" instance=ExtResource("7_wj3qo")]
-position = Vector2(4, 70)
-points = PackedVector2Array(650, 300, 550, 500)
+points = PackedVector2Array(650, 370, 550, 570)
 color = "blue"
 
 [node name="LevelLine2" parent="Lines" instance=ExtResource("7_wj3qo")]
-position = Vector2(4, 70)
-points = PackedVector2Array(650, 300, 750, 500)
+points = PackedVector2Array(650, 370, 750, 570)
 color = "yellow"
 
 [node name="LevelLine4" parent="Lines" instance=ExtResource("7_wj3qo")]
-position = Vector2(4, 70)
-points = PackedVector2Array(550, 500, 650, 700)
+points = PackedVector2Array(550, 570, 650, 770)
 color = "purple"
 
 [node name="LevelLine3" parent="Lines" instance=ExtResource("7_wj3qo")]
-position = Vector2(4, 70)
-points = PackedVector2Array(750, 500, 650, 700)
+points = PackedVector2Array(750, 570, 650, 770)
 color = "green"

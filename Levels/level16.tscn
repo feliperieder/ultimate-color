@@ -33,22 +33,17 @@ timer_time = 35
 [node name="Lines" type="Node2D" parent="."]
 
 [node name="LateLine" parent="Lines" instance=ExtResource("7_vkfsq")]
-position = Vector2(487, 338)
-points = PackedVector2Array(-71, 62, -7, -2)
+points = PackedVector2Array(424, 408, 480, 344)
 
 [node name="LateLine3" parent="Lines" instance=ExtResource("7_vkfsq")]
-position = Vector2(487, 338)
-points = PackedVector2Array(57, 462, -7, 406)
+points = PackedVector2Array(544, 808, 480, 744)
 
 [node name="LateLine4" parent="Lines" instance=ExtResource("7_vkfsq")]
-position = Vector2(487, 338)
-points = PackedVector2Array(329, 334, 393, 406)
+points = PackedVector2Array(816, 680, 880, 744)
 
 [node name="LateLine2" parent="Lines" instance=ExtResource("7_vkfsq")]
-position = Vector2(487, 338)
-points = PackedVector2Array(449, -58, 392, 4)
+points = PackedVector2Array(928, 296, 880, 344)
 
 [node name="LevelLine" parent="Lines" instance=ExtResource("8_c4ips")]
-position = Vector2(270, 257)
-points = PackedVector2Array(210, 85, 610, 85, 610, 485, 210, 485, 210, 85)
+points = PackedVector2Array(480, 342, 880, 342, 880, 742, 480, 742, 480, 342)
 color = "yellow"
