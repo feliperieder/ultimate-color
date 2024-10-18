@@ -28,8 +28,6 @@ func _ready() -> void:
 	if get_tree().current_scene.level <= 2:
 		var random_color = randi_range(0, initial_colors.size()-1)
 		color = initial_colors[random_color]
-		if not time_increased:
-			increaseTime() 
 	else:
 		var random_color = randi_range(0, colors.size()-1)
 		color = colors[random_color]
@@ -44,6 +42,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if get_tree().get_node_count_in_group("visible_points") <= 200:
 		self.show()
+		if not time_increased:
+			increaseTime() 
 	
 
 # Função para preencher a linha com objetos
@@ -88,6 +88,8 @@ func setColor():
 
 func increaseTime():
 	var clock = get_tree().get_first_node_in_group("timer")
-	print(clock.time.wait_time)
+	clock.timer.wait_time = clock.timer.time_left + time_increase
+	clock.timer.stop()
+	clock.timer.start()
 	time_increased = true
 	

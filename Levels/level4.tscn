@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2x58nk0qbvk6"]
+[gd_scene load_steps=9 format=3 uid="uid://c2x58nk0qbvk6"]
 
 [ext_resource type="Script" path="res://Levels/main.gd" id="1_cxed1"]
 [ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_2ku6a"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d1usyydica8j" path="res://Players/player_test.tscn" id="4_0cjo1"]
 [ext_resource type="PackedScene" uid="uid://cpencn7rbua8f" path="res://Players/drawing.tscn" id="5_xqv1e"]
 [ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="6_jw5eh"]
+[ext_resource type="PackedScene" uid="uid://dghwerdw1evvc" path="res://Menus/PauseMenu.tscn" id="8_tagqg"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cxed1")
@@ -57,3 +58,5 @@ color = "white"
 [node name="LevelLine5" parent="Lines" instance=ExtResource("6_jw5eh")]
 points = PackedVector2Array(824, 616, 736, 616, 736, 544, 824, 544, 824, 616)
 color = "white"
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_tagqg")]

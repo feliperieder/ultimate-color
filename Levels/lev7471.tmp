@@ -12,8 +12,6 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ns2qd")
 
-[node name="PauseMenu" parent="." instance=ExtResource("8_ecqk4")]
-
 [node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(640, 480)
@@ -28,6 +26,12 @@ position = Vector2(419, 306)
 [node name="Timer" parent="." instance=ExtResource("4_w6k7w")]
 position = Vector2(1165, 84)
 timer_time = 20
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_ecqk4")]
+offset_left = 616.0
+offset_top = 456.0
+offset_right = 616.0
+offset_bottom = 456.0
 
 [node name="UILayer" parent="." instance=ExtResource("2_nuo4h")]
 

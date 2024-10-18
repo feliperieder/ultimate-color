@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dghwerdw1evvc"]
+
+[ext_resource type="Script" path="res://Menus/pause_menu.gd" id="1_dasqm"]
+[ext_resource type="Texture2D" uid="uid://4fib7jva2ugk" path="res://Art/Buttons/Next/botao_proximo.png" id="1_nqx4o"]
+[ext_resource type="Texture2D" uid="uid://bd3lsp7iicnfe" path="res://Art/Buttons/Next/botao_proximo_apertado.png" id="2_1v4k2"]
+[ext_resource type="Texture2D" uid="uid://dayqkh7t7f5af" path="res://Art/Buttons/Next/botao_proximo_hover.png" id="3_rj1qm"]
+[ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="5_fxe8f"]
+[ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="6_ebdnu"]
+[ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="7_facw7"]
+
+[node name="PauseMenu" type="Control"]
+visible = false
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_dasqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_top = 368.0
+offset_right = 724.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Resume" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_nqx4o")
+texture_pressed = ExtResource("2_1v4k2")
+texture_focused = ExtResource("3_rj1qm")
+
+[node name="Quit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_fxe8f")
+texture_pressed = ExtResource("6_ebdnu")
+texture_focused = ExtResource("7_facw7")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

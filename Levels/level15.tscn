@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpmds4r0fvjyl"]
+[gd_scene load_steps=10 format=3 uid="uid://cpmds4r0fvjyl"]
 
 [ext_resource type="Script" path="res://Levels/main.gd" id="1_vp823"]
 [ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_ymk7y"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="6_lcflb"]
 [ext_resource type="PackedScene" uid="uid://cp0eliku01kcr" path="res://Gameplay/late_line.tscn" id="7_uaexv"]
 [ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="8_t1nye"]
+[ext_resource type="PackedScene" uid="uid://dghwerdw1evvc" path="res://Menus/PauseMenu.tscn" id="9_rl2kg"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vp823")
@@ -38,15 +39,22 @@ color = "yellow"
 
 [node name="LateLine" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(575, 450, 775, 450, 775, 650, 575, 650, 575, 450)
+time_increase = 10
 
 [node name="LateLine4" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(875, 750, 775, 650)
+time_increase = 2
 
 [node name="LateLine5" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(475, 750, 575, 650)
+time_increase = 2
 
 [node name="LateLine3" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(875, 350, 775, 450)
+time_increase = 2
 
 [node name="LateLine2" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(475, 350, 575, 450)
+time_increase = 2
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_rl2kg")]

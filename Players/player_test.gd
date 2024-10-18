@@ -38,53 +38,54 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction_h := Input.get_axis("left", "right")
-	if direction_h:
-		velocity.x = direction_h * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	if global_position.x < 391:
-		global_position.x = 391
-	elif global_position.x > 965:
-		global_position.x = 965
-	
-	var direction_v := Input.get_axis("up", "down")
-	if direction_v:
-		velocity.y = direction_v * SPEED
-	else:
-		velocity.y = move_toward(velocity.x, 0, SPEED)
+	if not get_tree().current_scene.paused:
+		var direction_h := Input.get_axis("left", "right")
+		if direction_h:
+			velocity.x = direction_h * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
-	if global_position.y < 265:
-		global_position.y = 265
-	elif global_position.y > 840:
-		global_position.y = 840
+		if global_position.x < 391:
+			global_position.x = 391
+		elif global_position.x > 965:
+			global_position.x = 965
 		
-	if Input.is_action_pressed("red_color") and not Input.is_action_pressed("blue_color") and not Input.is_action_pressed("white_color"):
-		painting = true
-		sprite.texture = RED_SPRITE
-	elif Input.is_action_pressed("yellow_color") and not Input.is_action_pressed("blue_color") and not Input.is_action_pressed("white_color"):
-		painting = true
-		sprite.texture = YELLOW_SPRITE
-	elif Input.is_action_pressed("blue_color") and not Input.is_action_pressed("red_color") and not Input.is_action_pressed("yellow_color"):
-		painting = true
-		sprite.texture = BLUE_SPRITE
-	elif Input.is_action_pressed("white_color") and not Input.is_action_pressed("red_color") and not Input.is_action_pressed("yellow_color"):
-		painting = true
-		sprite.texture = WHITE_SPRITE
-	elif Input.is_action_pressed("red_color") and Input.is_action_pressed("blue_color"):
-		painting = true
-		sprite.texture = PURPLE_SPRITE
-	elif Input.is_action_pressed("red_color") and Input.is_action_pressed("white_color"):
-		painting = true
-		sprite.texture = PINK_SPRITE
-	elif Input.is_action_pressed("yellow_color") and Input.is_action_pressed("blue_color") :
-		painting = true
-		sprite.texture = GREEN_SPRITE
-	elif Input.is_action_pressed("yellow_color") and Input.is_action_pressed("white_color"):
-		painting = true
-	else:
-		painting = false
+		var direction_v := Input.get_axis("up", "down")
+		if direction_v:
+			velocity.y = direction_v * SPEED
+		else:
+			velocity.y = move_toward(velocity.x, 0, SPEED)
+			
+		if global_position.y < 265:
+			global_position.y = 265
+		elif global_position.y > 840:
+			global_position.y = 840
+			
+		if Input.is_action_pressed("red_color") and not Input.is_action_pressed("blue_color") and not Input.is_action_pressed("white_color"):
+			painting = true
+			sprite.texture = RED_SPRITE
+		elif Input.is_action_pressed("yellow_color") and not Input.is_action_pressed("blue_color") and not Input.is_action_pressed("white_color"):
+			painting = true
+			sprite.texture = YELLOW_SPRITE
+		elif Input.is_action_pressed("blue_color") and not Input.is_action_pressed("red_color") and not Input.is_action_pressed("yellow_color"):
+			painting = true
+			sprite.texture = BLUE_SPRITE
+		elif Input.is_action_pressed("white_color") and not Input.is_action_pressed("red_color") and not Input.is_action_pressed("yellow_color"):
+			painting = true
+			sprite.texture = WHITE_SPRITE
+		elif Input.is_action_pressed("red_color") and Input.is_action_pressed("blue_color"):
+			painting = true
+			sprite.texture = PURPLE_SPRITE
+		elif Input.is_action_pressed("red_color") and Input.is_action_pressed("white_color"):
+			painting = true
+			sprite.texture = PINK_SPRITE
+		elif Input.is_action_pressed("yellow_color") and Input.is_action_pressed("blue_color") :
+			painting = true
+			sprite.texture = GREEN_SPRITE
+		elif Input.is_action_pressed("yellow_color") and Input.is_action_pressed("white_color"):
+			painting = true
+		else:
+			painting = false
 
 	if draw_zone == 0 and painting and not game_ended:
 		animation.play("angry")

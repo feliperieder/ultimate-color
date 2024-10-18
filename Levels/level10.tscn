@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cncr0341c764p"]
+[gd_scene load_steps=10 format=3 uid="uid://cncr0341c764p"]
 
 [ext_resource type="Script" path="res://Levels/main.gd" id="1_ieob5"]
 [ext_resource type="Texture2D" uid="uid://df7m0h1pa775j" path="res://Art/BG/bg_AZUL.png" id="2_23m8o"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://i6nu1j1564eq" path="res://UI/ui_layer.tscn" id="6_d2u4t"]
 [ext_resource type="PackedScene" uid="uid://b5et3exwbxfh8" path="res://Gameplay/level_line.tscn" id="7_g3i45"]
 [ext_resource type="PackedScene" uid="uid://defuhwfbattrr" path="res://Gameplay/DisturbVision.tscn" id="8_fpe1p"]
+[ext_resource type="PackedScene" uid="uid://dghwerdw1evvc" path="res://Menus/PauseMenu.tscn" id="9_0gia7"]
 
 [node name="Main2" type="Node2D"]
 script = ExtResource("1_ieob5")
@@ -63,3 +64,5 @@ color = "white"
 position = Vector2(672, 536)
 disturb_time = 40
 duration = 10
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_0gia7")]
