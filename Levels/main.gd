@@ -27,8 +27,6 @@ func endLevel(points):
 	clock.hide()
 	player.hide()
 	animation.hide()
-	if drawing.drawing:
-		drawing.finishingLine()
 	drawing.level_finished = true
 	MenuScoreInstanciate(points)
 
