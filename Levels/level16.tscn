@@ -35,19 +35,19 @@ timer_time = 35
 
 [node name="LateLine" parent="Lines" instance=ExtResource("7_vkfsq")]
 points = PackedVector2Array(424, 408, 480, 344)
-time_increase = 1
+time_increase = 2
 
 [node name="LateLine3" parent="Lines" instance=ExtResource("7_vkfsq")]
 points = PackedVector2Array(544, 808, 480, 744)
-time_increase = 1
+time_increase = 2
 
 [node name="LateLine4" parent="Lines" instance=ExtResource("7_vkfsq")]
 points = PackedVector2Array(816, 680, 880, 744)
-time_increase = 1
+time_increase = 2
 
 [node name="LateLine2" parent="Lines" instance=ExtResource("7_vkfsq")]
 points = PackedVector2Array(928, 296, 880, 344)
-time_increase = 1
+time_increase = 2
 
 [node name="LevelLine" parent="Lines" instance=ExtResource("8_c4ips")]
 points = PackedVector2Array(480, 342, 880, 342, 880, 742, 480, 742, 480, 342)

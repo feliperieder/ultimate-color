@@ -39,22 +39,18 @@ color = "yellow"
 
 [node name="LateLine" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(575, 450, 775, 450, 775, 650, 575, 650, 575, 450)
-time_increase = 10
+time_increase = 30
 
 [node name="LateLine4" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(875, 750, 775, 650)
-time_increase = 2
 
 [node name="LateLine5" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(475, 750, 575, 650)
-time_increase = 2
 
 [node name="LateLine3" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(875, 350, 775, 450)
-time_increase = 2
 
 [node name="LateLine2" parent="Lines" instance=ExtResource("7_uaexv")]
 points = PackedVector2Array(475, 350, 575, 450)
-time_increase = 2
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_rl2kg")]

@@ -54,6 +54,13 @@ grow_vertical = 0
 size_flags_vertical = 8
 metadata/_edit_use_anchors_ = true
 
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("9_c7m34")
+texture_pressed = ExtResource("10_ubwgl")
+texture_focused = ExtResource("11_3d2fh")
+
 [node name="QuitButton" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -68,5 +75,6 @@ texture_normal = ExtResource("9_c7m34")
 texture_pressed = ExtResource("10_ubwgl")
 texture_focused = ExtResource("11_3d2fh")
 
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]

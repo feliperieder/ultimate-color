@@ -28,7 +28,7 @@ position = Vector2(494, 324)
 
 [node name="Timer" parent="." instance=ExtResource("6_g7vgt")]
 position = Vector2(1165, 84)
-timer_time = 25
+timer_time = 45
 
 [node name="Lines" type="Node2D" parent="."]
 

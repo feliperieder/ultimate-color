@@ -35,9 +35,11 @@ timer_time = 35
 
 [node name="LateLine" parent="Lines" instance=ExtResource("8_amd5g")]
 points = PackedVector2Array(877, 739, 486, 344)
+time_increase = 10
 
 [node name="LateLine2" parent="Lines" instance=ExtResource("8_amd5g")]
 points = PackedVector2Array(482, 738, 879, 342)
+time_increase = 10
 
 [node name="LevelLine" parent="Lines" instance=ExtResource("7_g3i45")]
 points = PackedVector2Array(480, 342, 880, 342, 880, 742, 480, 742, 480, 342)

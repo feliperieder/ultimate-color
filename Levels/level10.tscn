@@ -18,7 +18,6 @@ level = 10
 
 [node name="Timer" parent="." instance=ExtResource("5_23gyn")]
 position = Vector2(1165, 84)
-timer_time = 75
 
 [node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1

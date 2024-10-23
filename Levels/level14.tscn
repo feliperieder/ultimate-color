@@ -35,6 +35,7 @@ timer_time = 35
 
 [node name="LateLine" parent="Lines" instance=ExtResource("7_juipm")]
 points = PackedVector2Array(480, 344, 679, 536, 880, 344)
+time_increase = 10
 
 [node name="LevelLine" parent="Lines" instance=ExtResource("8_d1uxu")]
 points = PackedVector2Array(480, 342, 880, 342, 880, 742, 480, 742, 480, 342)
@@ -42,5 +43,6 @@ color = "yellow"
 
 [node name="LateLine2" parent="Lines" instance=ExtResource("7_juipm")]
 points = PackedVector2Array(816, 704, 816, 656, 744, 656, 744, 704, 821, 704)
+time_increase = 10
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_6ghsw")]
