@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://cyv0rx7uxihhb" path="res://Art/BG/menu_fundo.png" id="2_ge3gi"]
 [ext_resource type="Texture2D" uid="uid://dkfe5i6hjpypy" path="res://Art/Buttons/Play/botao_jogar_normal.png" id="2_ujjxg"]
 [ext_resource type="Texture2D" uid="uid://bi6x41uq3oq7q" path="res://Art/Buttons/Play/botao_jogar_apertado.png" id="3_nnn1v"]
-[ext_resource type="Texture2D" uid="uid://n15olu7vc2d3" path="res://Art/Buttons/Play/botao_jogar_hover.png" id="4_i8ao7"]
+[ext_resource type="Texture2D" uid="uid://c0rx54jeotxep" path="res://Art/Buttons/Play/botao_jogar_hover_novo.png" id="5_5qb0w"]
 [ext_resource type="Texture2D" uid="uid://vptt8x81whvx" path="res://Art/Buttons/Scores/botao_recordes_apertado.png" id="5_csi6s"]
 [ext_resource type="Texture2D" uid="uid://ed3pf7gqmffj" path="res://Art/Buttons/LevelSelect/botao_selecao_normal.png" id="6_qpxfk"]
 [ext_resource type="Texture2D" uid="uid://exo8kp6ku4xx" path="res://Art/Buttons/HowToPlay/botao_como_jogar_normal.png" id="7_14mna"]
-[ext_resource type="Texture2D" uid="uid://bepwwbuub77d3" path="res://Art/Buttons/LevelSelect/botao_selecao_hover.png" id="8_faiq3"]
 [ext_resource type="Texture2D" uid="uid://b5011fbrbppw6" path="res://Art/Buttons/HowToPlay/botao_como_jogar_apertado.png" id="8_j0ixr"]
-[ext_resource type="Texture2D" uid="uid://drmu7rxl06mqe" path="res://Art/Buttons/HowToPlay/botao_como_jogar_hover.png" id="9_acyp5"]
+[ext_resource type="Texture2D" uid="uid://bfm6rq2duhnxg" path="res://Art/Buttons/LevelSelect/botao_selecao_hover_novo.png" id="8_yx2be"]
 [ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="10_370pr"]
 [ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="11_7pfo5"]
+[ext_resource type="Texture2D" uid="uid://bgyyfjfcn1lf5" path="res://Art/Buttons/HowToPlay/botao_como_jogar_hover_novo.png" id="11_63us4"]
 [ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="12_e5nt5"]
 
 [node name="Menu" type="Node2D"]
@@ -46,26 +46,29 @@ texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("2_ujjxg")
 texture_pressed = ExtResource("3_nnn1v")
-texture_focused = ExtResource("4_i8ao7")
+texture_focused = ExtResource("5_5qb0w")
 
 [node name="LevelSelect" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("6_qpxfk")
 texture_pressed = ExtResource("5_csi6s")
-texture_focused = ExtResource("8_faiq3")
+texture_focused = ExtResource("8_yx2be")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="HowToPlay" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 4
 texture_normal = ExtResource("7_14mna")
 texture_pressed = ExtResource("8_j0ixr")
-texture_focused = ExtResource("9_acyp5")
+texture_focused = ExtResource("11_63us4")
 
 [node name="Quit" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+visible = false
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("10_370pr")

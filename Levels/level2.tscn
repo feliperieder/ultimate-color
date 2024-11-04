@@ -13,8 +13,6 @@
 script = ExtResource("1_rl64h")
 level = 2
 
-[node name="UILayer" parent="." instance=ExtResource("2_bptgo")]
-
 [node name="BgAzul" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(640, 480)
@@ -30,6 +28,8 @@ position = Vector2(494, 324)
 position = Vector2(1165, 84)
 timer_time = 30
 
+[node name="UILayer" parent="." instance=ExtResource("2_bptgo")]
+
 [node name="Lines" type="Node2D" parent="."]
 
 [node name="LevelLine" parent="Lines" instance=ExtResource("6_f16tk")]
@@ -37,7 +37,5 @@ points = PackedVector2Array(470, 330, 470, 740, 880, 740, 470, 330)
 color = "blue"
 
 [node name="PauseMenu" parent="." instance=ExtResource("8_yhmbh")]
-offset_left = 652.0
-offset_top = 549.0
-offset_right = 652.0
-offset_bottom = 549.0
+offset_left = 2.0
+offset_right = 2.0

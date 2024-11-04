@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dghwerdw1evvc"]
 
 [ext_resource type="Script" path="res://Menus/pause_menu.gd" id="1_dasqm"]
-[ext_resource type="Texture2D" uid="uid://4fib7jva2ugk" path="res://Art/Buttons/Next/botao_proximo.png" id="1_nqx4o"]
 [ext_resource type="Texture2D" uid="uid://bd3lsp7iicnfe" path="res://Art/Buttons/Next/botao_proximo_apertado.png" id="2_1v4k2"]
-[ext_resource type="Texture2D" uid="uid://dayqkh7t7f5af" path="res://Art/Buttons/Next/botao_proximo_hover.png" id="3_rj1qm"]
+[ext_resource type="Texture2D" uid="uid://cuuw4xi18i5xh" path="res://Art/Buttons/Continue/botao_continua_normal.png" id="2_c8hai"]
+[ext_resource type="Texture2D" uid="uid://b7mvvk2jybj0h" path="res://Art/Buttons/Continue/botao_continua_hover_novo.png" id="4_o0r8w"]
 [ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="5_fxe8f"]
 [ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="6_ebdnu"]
 [ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="7_facw7"]
@@ -38,9 +38,9 @@ size_flags_horizontal = 4
 [node name="Resume" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("1_nqx4o")
+texture_normal = ExtResource("2_c8hai")
 texture_pressed = ExtResource("2_1v4k2")
-texture_focused = ExtResource("3_rj1qm")
+texture_focused = ExtResource("4_o0r8w")
 
 [node name="Quit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

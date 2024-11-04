@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://cvlmj01u6oxdv" path="res://Art/fonts/GrapeSoda.ttf" id="2_xjwsy"]
 [ext_resource type="Texture2D" uid="uid://dkupyg8d30cup" path="res://Art/Buttons/NextLevel/botao_proxima_fase.png" id="3_6i5dc"]
 [ext_resource type="Texture2D" uid="uid://bjtq7xwt7mdc4" path="res://Art/Buttons/NextLevel/botao_proxima_fase_apertado.png" id="4_hky0g"]
-[ext_resource type="Texture2D" uid="uid://cbhxdp068liik" path="res://Art/Buttons/NextLevel/botao_proxima_fase_hover.png" id="5_5x15u"]
+[ext_resource type="Texture2D" uid="uid://dn58lqd8bqh47" path="res://Art/Buttons/NextLevel/botao_proxima_fase_hover_novo.png" id="5_lbqm4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ket5"]
 font = ExtResource("2_xjwsy")
@@ -49,6 +49,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("3_6i5dc")
 texture_pressed = ExtResource("4_hky0g")
-texture_focused = ExtResource("5_5x15u")
+texture_focused = ExtResource("5_lbqm4")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]

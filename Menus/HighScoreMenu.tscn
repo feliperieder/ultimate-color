@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Menus/high_score_menu.gd" id="1_hrbgn"]
 [ext_resource type="FontFile" uid="uid://cvlmj01u6oxdv" path="res://Art/fonts/GrapeSoda.ttf" id="2_ggofq"]
-[ext_resource type="Texture2D" uid="uid://briynjth7f5h0" path="res://Art/Buttons/Quit/botao_sair_normal.png" id="3_nor31"]
+[ext_resource type="Texture2D" uid="uid://b13dppywkbge" path="res://Art/Buttons/Back/botao_voltar_normal.png" id="3_ftjtp"]
 [ext_resource type="Texture2D" uid="uid://b4vdlykln6iia" path="res://Art/Buttons/Quit/botao_sair_apertado.png" id="4_pewdt"]
-[ext_resource type="Texture2D" uid="uid://dsqpsnqxoorp2" path="res://Art/Buttons/Quit/botao_sair_hover.png" id="5_pc10g"]
+[ext_resource type="Texture2D" uid="uid://5pqyfsmr2kxa" path="res://Art/Buttons/Back/botao_voltar_hover_novo.png" id="5_gqoel"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kowka"]
 font = ExtResource("2_ggofq")
@@ -69,8 +69,8 @@ horizontal_alignment = 2
 [node name="Button" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("3_nor31")
+texture_normal = ExtResource("3_ftjtp")
 texture_pressed = ExtResource("4_pewdt")
-texture_focused = ExtResource("5_pc10g")
+texture_focused = ExtResource("5_gqoel")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]

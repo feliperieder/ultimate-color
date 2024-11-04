@@ -34,7 +34,7 @@ func setColor(line_color):
 		"red": return Color(0.675, 0.196, 0.196)
 		"yellow": return Color(0.882, 0.729, 0.09)
 		"blue": return Color(0.388, 0.608, 1)
-		"white": return Color(0.729, 0.792, 0.914)
+		"white": return Color.WHITE
 		"purple": return Color(0.463, 0.259, 0.541)
 		"pink": return Color.HOT_PINK
 		"green": return Color(0.294, 0.412, 0.184)

@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://Gameplay/level_line.gd" id="1_qbtb4"]
 
 [node name="LevelLine" type="Line2D" groups=["line"]]
+default_color = Color(1, 1, 1, 0.427451)
 script = ExtResource("1_qbtb4")
